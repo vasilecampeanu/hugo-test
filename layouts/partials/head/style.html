@@ -1,0 +1,8 @@
+{{/* Get SCSS styles from resources */}}
+{{ $sass := resources.Get "scss/style.scss" }}
+
+{{/* Compile style from SCSS to CSS */}}
+{{ $style := $sass | resources.ToCSS }}
+
+{{/* Link Style */}}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
