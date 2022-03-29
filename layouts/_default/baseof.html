@@ -2,13 +2,23 @@
 <html lang="en">
 <head>
     {{- partial "head/head.html" . -}}
-    {{/*  {{- block "head" . -}}{{ end }}  */}}
 </head>
 <body>
-    Top of base of
-    <hr>
-    {{ block "main" . }}{{ end }}
-    <hr>
-    Bottom of base of
+    <div class="site-wrapper">
+        <header id="header">
+            {{- partial "header/header.html" . -}}
+        </header>
+        <main id="main">
+            Top of base of
+            <hr>
+            {{ block "main" . }}{{ end }}
+            <hr>
+            Bottom of base of
+        </main>
+        <footer id="footer">
+            {{- partial "footer/footer" . -}}
+        </footer>
+        {{ partial "footer/include.html" . }}
+    </div>
 </body>
 </html>

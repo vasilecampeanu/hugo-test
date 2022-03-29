@@ -1,19 +1,7 @@
-// Font settings
-@font-face 
-{
-    font-family: "Virgil";
-    src: url("https://excalidraw.com/Virgil.woff2");
-}
+// Core styles
+@import "/core/variables.scss";
+@import "./core/normalize.scss";
+@import "./core/base.scss";
 
-@font-face 
-{
-    font-family: "Cascadia";
-    src: url("https://excalidraw.com/Cascadia.woff2");
-}
-
-// General
-body
-{
-    background-color: rebeccapurple;
-    font-family: Virgil;
-}
+// Partial styles
+@import "./partials/header.scss";

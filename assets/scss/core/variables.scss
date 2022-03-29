@@ -1,0 +1,29 @@
+// Setup custom fonts
+// Virgil
+@font-face 
+{
+    font-family: "Virgil";
+    src: url("https://excalidraw.com/Virgil.woff2");
+}
+
+// Cascadia
+@font-face 
+{
+    font-family: "Cascadia";
+    src: url("https://excalidraw.com/Cascadia.woff2");
+}
+
+// Theme colors
+:root
+{
+    --background-primary: #ffffff;
+    --text-normal: #000000;
+    --text-accent: #4C6EF5;
+    --text-accent-hover: #F5D34C;
+}
+
+// Typography
+:root
+{
+    --default-font: "Cascadia";
+}

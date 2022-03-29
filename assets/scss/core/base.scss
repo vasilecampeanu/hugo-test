@@ -1,0 +1,37 @@
+body
+{
+    display: grid;
+    background-color: var(--background-primary);
+    font-family: var(--default-font);
+}
+
+.site-wrapper
+{
+    justify-self: center;
+    
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    grid-template-rows: auto;
+
+    width: 100%;
+    max-width: 1536px;
+    padding: 0px 20px;
+
+    header
+    {
+        grid-area: header;
+    }
+
+    main
+    {
+        grid-area: main;
+    }
+
+    footer
+    {
+        grid-area: footer;
+    }
+}
