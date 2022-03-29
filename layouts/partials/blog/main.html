@@ -1,34 +1,6 @@
 <div class="main-wrapper blog">
-    <aside class="sidebar left-sidebar sticky">
-        <div class="profile">
-            <div class="profile-picture">
-            </div>
-            <div class="title">
-                <a href="/">Vasile <span>Câmpeanu</span></a>
-            </div>
-            <div class="description">
-                The purpose of thinking is to let your thoughts die instead of you.
-            </div>
-            <div class="socialmedia">
-            </div>
-        </div>
-        <div class="links">
-            <ul>
-                {{ $currentPage := . }}
-                {{ range .Site.Menus.main }}
-                    {{ $menu_item_url := .URL | relLangURL }}
-                    {{ $page_url:= $currentPage.RelPermalink | relLangURL }}
-                    {{ $icon := default "link" .Params.Icon }}
-                    <li><a class="{{ if eq $menu_item_url $page_url }}active{{ end }}" href="{{ .URL }}"><i class="{{ $icon }}"></i>{{ .Name }}</a></li>
-                {{ end }}
-            </ul>
-        </div>
-        <div class="actions">
-            Actions
-        </div>
-    </aside>
-    <section class="main-conetnt">
-        Main Content
+    <section class="article-list">
+        Article list
     </section>
     <aside class="sidebar right-sidebar sticky">
         Right
