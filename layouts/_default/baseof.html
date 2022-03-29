@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {{- partial "head/head.html" . -}}
+    {{ partial "head/head.html" . }}
+    {{ block "style" . }}{{ end }}
 </head>
 <body>
     <div class="site-wrapper">
