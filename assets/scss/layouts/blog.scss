@@ -1,0 +1,111 @@
+main .main-wrapper.blog
+{
+    display: grid;
+    grid-template-areas: 
+    "left_sidebar main_content right_sidebar";
+    gap: 1rem;
+    grid-template-columns: 20% 1fr 22.5%;
+ 
+    height: 100vh;
+    padding-top: 40px;
+
+    aside.sidebar.left-sidebar
+    {
+        grid-area: left_sidebar;
+
+        display: grid;
+        grid-template-areas: 
+        "profile"
+        "links"
+        "actions";
+
+        grid-template-rows: auto 1fr auto;
+
+        .profile
+        {
+            .profile-picture
+            {
+                width: 125px;
+                height: 125px;
+                position: relative;
+                border-radius: 100%;
+                border: 5px solid #c9c9c9;
+                background-color: #fff;
+                box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+            }
+
+            .title
+            {
+                padding-top: 20px;
+                
+                a
+                {
+                    font-size: 20px;
+                    text-decoration: none;
+                    font-weight: bold;
+                    color: var(--text-normal);
+
+                    span
+                    {
+                        color: var(--text-accent);
+                    }
+                }
+            }
+
+            .description
+            {
+                padding: 10px 0px;
+            }
+        }
+
+        .links
+        {
+            ul
+            {
+                li
+                {
+                    list-style: none;
+                    margin-bottom: 10px;
+
+                    a
+                    {
+                        font-size: 18px;
+                        font-weight: bold;
+                        text-decoration: none;
+                        color: var(--text-normal);
+                        
+                        &.active
+                        {
+                            color: var(--text-accent);
+                        }
+                        
+                        transition: all .325s;
+
+                        &:hover
+                        {
+                            color: var(--text-accent-hover);
+                        }
+
+                        i
+                        {
+                            width: 25px;
+                            margin: 0 auto;   
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section.main-conetnt
+    {
+        grid-area: main_content;
+        background-color: yellow;
+    }
+
+    aside.sidebar.right-sidebar
+    {
+        grid-area: right_sidebar;
+        background-color: red;
+    }
+}

@@ -33,7 +33,7 @@
                 "weight": "3",
                 "params": 
                 {
-                    "icon": "fa-solid fa-diagram-project"
+                    "icon": "fa-solid fa-cube"
                 }
             },
             {
@@ -43,7 +43,7 @@
                 "weight": "4",
                 "params": 
                 {
-                    "icon": "fa-solid fa-cube"
+                    "icon": "fa-solid fa-diagram-project"
                 }
             },
             {
