@@ -45,6 +45,16 @@
                 {
                     "icon": "fa-solid fa-cube"
                 }
+            },
+            {
+                "identifier": "newsletter",
+                "name": "Newsletter",
+                "url": "/newsletter/",
+                "weight": "5",
+                "params": 
+                {
+                    "icon": "fa-solid fa-envelope"
+                }
             }
         ]
    }

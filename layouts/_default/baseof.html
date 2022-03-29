@@ -6,7 +6,7 @@
 <body>
     <div class="site-wrapper">
         <header id="header">
-            {{- partial "header/header.html" . -}}
+            {{ block "header" . }}{{ end }}
         </header>
         <main id="main">
             Top of base of
@@ -16,7 +16,7 @@
             Bottom of base of
         </main>
         <footer id="footer">
-            {{- partial "footer/footer" . -}}
+            {{ block "footer" . }}{{ end }}
         </footer>
         {{ partial "footer/include.html" . }}
     </div>
