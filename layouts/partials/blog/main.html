@@ -3,11 +3,21 @@
     {{ $notHidden := where .Site.RegularPages "Params.hidden" "!=" true }}
     {{ $filtered := ($pages | intersect $notHidden) }}
     {{ $pag := .Paginate ($filtered) }}
-    
+
+    <aside class="sidebar left-sidebar sticky">
+        <ul class="popular-posts">
+            {{ range $index, $element := $filtered }}
+                <li>
+                    <a href="{{ .RelPermalink }}"><i class="fa-solid fa-arrow-right"></i> {{ .Title }}</a>
+                </li>
+            {{ end }}
+        </ul>
+    </aside>
     <section class="article-list">
         {{ range $index, $element := $pag.Pages }}
             {{ partial "article-list/default" . }}
         {{ end }}
+        {{ partial "pagination.html" . }}
     </section>
     <aside class="sidebar right-sidebar sticky">
         Right

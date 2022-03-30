@@ -1,6 +1,6 @@
 ---
 author: "Vasile Campeanu"
-title: "Post A"
+title: "This is Test Post A ipsum ipsum"
 date: "2022-03-30"
 description: "Description for post a"
 tags: ["letter"]

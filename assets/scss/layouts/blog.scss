@@ -2,11 +2,46 @@ main .main-wrapper.blog
 {
     display: grid;
     grid-template-areas: 
-    "main_content right_sidebar";
-    gap: 2rem;
-    grid-template-columns: 1fr 27.5%;
+    "left_sidebar main_content right_sidebar";
+    gap: 1rem;
+    grid-template-columns: 17.5% 1fr 22.5%;
  
     // height: 100vh;
+
+    aside.sidebar.left-sidebar
+    {
+        grid-area: left_sidebar;
+
+        ul.popular-posts
+        {
+            li
+            {
+                list-style: none;
+                a
+                {
+                    color: var(--text-normal);
+                    text-decoration: none;
+                    transition: all .325s;
+                    font-size: 1.1rem;
+                    i
+                    {
+                        color: var(--text-accent);
+                        transition: all .325s;
+                    }
+                    
+                    &:hover
+                    {
+                        color: var(--text-accent-hover);
+                    }
+
+                    &:hover i
+                    {
+                        color: var(--text-accent-hover);
+                    }
+                }
+            }
+        }
+    }
 
     .article-list
     {
@@ -130,5 +165,6 @@ main .main-wrapper.blog
     aside.sidebar.right-sidebar
     {
         grid-area: right_sidebar;
+        background-color: red;
     }
 }
