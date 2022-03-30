@@ -4,7 +4,7 @@ title: "Post A"
 date: "2022-03-30"
 description: "Description for post a"
 tags: ["letter"]
-categories: ["test"]
+categories: ["test1", "test2"]
 image: "banner.jpg"
 ---
 

@@ -5,7 +5,6 @@ date: "2022-03-30"
 description: "Description for post b"
 tags: ["letter"]
 categories: ["test"]
-image: "banner.jpg"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec velit enim, finibus consequat libero at, sagittis convallis tortor. Nullam sit amet odio efficitur, aliquet justo nec, dignissim sem. Aliquam erat volutpat. Aliquam faucibus sodales tristique. Phasellus pellentesque orci orci, feugiat sollicitudin nunc sollicitudin eget. Suspendisse potenti. Suspendisse iaculis risus sed congue scelerisque. Suspendisse a ex at ante rhoncus pretium nec sed tortor. Etiam dapibus sem a mauris commodo faucibus. Aenean pretium eu diam et facilisis.

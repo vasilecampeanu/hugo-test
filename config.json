@@ -2,6 +2,7 @@
    "baseURL": "http://example.org/",
    "languageCode": "en-us",
    "title": "vasilecampeanu.com",
+   "paginate": 2,
    "params":
    {
         "mainSections": "blog/posts",

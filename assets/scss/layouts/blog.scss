@@ -11,6 +11,120 @@ main .main-wrapper.blog
     .article-list
     {
         grid-area: main_content;
+
+        article
+        {
+            // background-color: rebeccapurple;
+            margin-bottom: 36px;
+            border-radius: 15px;
+            border: 2px solid black;
+
+            box-shadow: var(--shadow-l1);
+
+            &:hover
+            {
+                box-shadow: var(--shadow-l2);
+            }
+
+            &.has-image
+            {
+                .article-image
+                {
+                    a
+                    {
+                        img
+                        {
+                            width: 100%;
+                            height: 250px;
+                            border-radius: 12.5px;
+                        }
+                    }
+                }
+            }
+
+            .article-details
+            {
+                padding: 30px;
+
+                header
+                {
+                    &.article-category
+                    {
+                        a
+                        {
+                            text-decoration: none;
+                            color: var(--text-normal);
+                            border: 2px solid black;
+                            padding: 5px 20px;
+                            border-radius: 5px;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+
+                .article-title-wrapper
+                {
+                    margin-top: 7.5px;
+
+                    .article-title
+                    {
+                        
+                        a
+                        {
+                            text-decoration: none;
+                            color: var(--text-accent);
+                            transition: all .325s;
+
+                            &:hover
+                            {
+                                color: var(--text-accent-hover);
+                            }
+                        }
+                    }
+
+                    .article-description
+                    {
+                        border-top: 1px solid black;
+                        border-bottom: 1px solid black;
+                        padding: 10px 0px;
+                    }
+                }
+
+                footer
+                {
+                    margin-top: 5px;
+                    &.article-time, &.article-translations 
+                    {
+                        display: flex;
+                        align-items: center;
+                        color: var(--text-normal);
+                        gap: 15px;
+                        flex-wrap: wrap;
+    
+                        svg 
+                        {
+                            vertical-align: middle;
+                            width: 20px;
+                            height: 20px;
+                            stroke-width: 1.33;
+                        }
+                    
+                        time
+                        {
+                            font-size: 1rem;
+                            color: var(--text-normal);
+                        }
+                    
+                        & > div 
+                        {
+                            display: inline-flex;
+                            align-items: center;
+                            gap: 7.5px;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     aside.sidebar.right-sidebar
