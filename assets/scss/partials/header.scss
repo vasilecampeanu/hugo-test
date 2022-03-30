@@ -80,5 +80,18 @@ header nav.navbar.desktop
         grid-area: actions;
         align-self: center;
         font-weight: bold;
+        // background-color: red;
+        margin-left: 30px;
+        padding-left: 10px;
+        border-left: 2px solid black;
+        line-height: 20px;
+        ul
+        {
+            li
+            {
+                display: inline;
+                list-style: none;
+            }
+        }
     }
 }
