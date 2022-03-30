@@ -1,8 +1,8 @@
 ---
 author: "Vasile Campeanu"
-title: "Post C"
+title: "C: This is just a regular test"
 date: "2022-03-30"
-description: "Description for post c"
+description: "This is jus a description"
 tags: ["letter"]
 categories: ["test"]
 image: "banner.jpg"

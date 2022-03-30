@@ -1,0 +1,36 @@
+.pagination 
+{
+    display: flex;
+    box-shadow: var(--shadow-l1);
+    border-radius: 5px;
+    overflow: hidden;
+    flex-wrap: wrap;
+    // justify-content: center;
+    border: 2px solid black;
+
+    margin-bottom: 10px;
+
+    .page-link 
+    {
+        cursor: pointer;
+        padding: 8px 32px;
+        display: inline-flex;
+        font-weight: bold;
+        border-right: 2px solid black;
+
+        &.current 
+        {
+            box-shadow: var(--shadow-l1);
+        }
+
+        &:hover
+        {
+            // color: var(--text-accent-hover);
+            text-decoration: underline;
+        }
+
+        text-decoration: none;
+
+        color: var(--card-text-color-secondary);
+    }
+}

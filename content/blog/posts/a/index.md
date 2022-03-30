@@ -1,10 +1,10 @@
 ---
 author: "Vasile Campeanu"
-title: "This is Test Post A ipsum ipsum"
+title: "A: This is just a regular test"
 date: "2022-03-30"
-description: "Description for post a"
+description: "This is jus a description"
 tags: ["letter"]
-categories: ["test1", "test2"]
+categories: ["test"]
 image: "banner.jpg"
 ---
 

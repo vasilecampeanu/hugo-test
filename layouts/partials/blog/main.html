@@ -4,22 +4,34 @@
     {{ $filtered := ($pages | intersect $notHidden) }}
     {{ $pag := .Paginate ($filtered) }}
 
-    <aside class="sidebar left-sidebar sticky">
-        <ul class="popular-posts">
-            {{ range $index, $element := $filtered }}
-                <li>
-                    <a href="{{ .RelPermalink }}"><i class="fa-solid fa-arrow-right"></i> {{ .Title }}</a>
-                </li>
-            {{ end }}
-        </ul>
-    </aside>
+    <div>
+        <aside class="sidebar left-sidebar sticky">
+            <div>
+                <div class="popular-posts-title">
+                    POPULAR CONETNT
+                </div>
+                <ul class="popular-posts">
+                    {{ range $index, $element := $filtered }}
+                        <li>
+                            <div>
+                                <span><i class="fa-solid fa-arrow-right"></i></span>
+                                <div><a href="{{ .RelPermalink }}"></i> {{ .Title }}</a></div>    
+                            </div>
+                        </li>
+                    {{ end }}
+                </ul>
+            </div>
+        </aside>
+    </div>
     <section class="article-list">
         {{ range $index, $element := $pag.Pages }}
             {{ partial "article-list/default" . }}
         {{ end }}
         {{ partial "pagination.html" . }}
     </section>
-    <aside class="sidebar right-sidebar sticky">
-        Right
-    </aside>
+    <div>
+        <aside class="sidebar right-sidebar sticky">
+            {{ partial "rightSidebar.html" (dict "Context" . "Scope" "blogpage") }}
+        </aside>
+    </div>
 </div>

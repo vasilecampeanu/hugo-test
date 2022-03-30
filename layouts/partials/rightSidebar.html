@@ -1,0 +1,11 @@
+{{ $scope := default "blogpage" .Scope }}
+{{ $context := .Context }}
+{{ with (index .Context.Site.Params.widgets $scope) }}
+    {{ range $widget := . }}
+        {{ if templates.Exists (printf "partials/widget/%s.html" .type) }}
+            {{ partial (printf "widget/%s" .type) (dict "Context" $context "Params" .params) }}
+        {{ else }}
+            {{ warnf "Widget %s not found" .type }}
+        {{ end }}
+    {{ end }}
+{{ end }}

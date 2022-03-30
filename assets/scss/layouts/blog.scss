@@ -3,41 +3,69 @@ main .main-wrapper.blog
     display: grid;
     grid-template-areas: 
     "left_sidebar main_content right_sidebar";
-    gap: 1rem;
-    grid-template-columns: 17.5% 1fr 22.5%;
+    gap: 1.5rem;
+    grid-template-columns: 22.5% 1fr 22.5%;
  
     // height: 100vh;
+
+    aside.sidebar
+    {
+        &.sticky
+        {
+            position: sticky;
+        }
+    }
 
     aside.sidebar.left-sidebar
     {
         grid-area: left_sidebar;
+        
+        &.sticky 
+        {
+            top: 25px;
+        }
+
+        .popular-posts-title
+        {
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding-bottom: 10px;
+        }
 
         ul.popular-posts
         {
             li
             {
                 list-style: none;
-                a
+                margin-bottom: 7.5px;
+                cursor: pointer;
+
+                div
                 {
-                    color: var(--text-normal);
-                    text-decoration: none;
-                    transition: all .325s;
-                    font-size: 1.1rem;
-                    i
+                    display: inline-flex;
+
+                    span
                     {
-                        color: var(--text-accent);
-                        transition: all .325s;
-                    }
-                    
-                    &:hover
-                    {
-                        color: var(--text-accent-hover);
+                        padding-right: 12.5px;
+                        
+                        i
+                        {
+                            color: var(--text-accent);
+                            transition: all .325s;
+                        }
                     }
 
-                    &:hover i
+                    a
                     {
-                        color: var(--text-accent-hover);
+                        color: var(--text-normal);
+                        text-decoration: none;
+                        font-weight: bold;
                     }
+                }
+
+                &:hover i
+                {
+                    transform: translateX(7.5px);
                 }
             }
         }
@@ -165,6 +193,69 @@ main .main-wrapper.blog
     aside.sidebar.right-sidebar
     {
         grid-area: right_sidebar;
-        background-color: red;
+
+        &.sticky 
+        {
+            top: 25px;
+        }
+
+        .widget
+        {
+            margin-bottom: 20px;
+
+            &.tagCloud 
+            {
+                .tagCloud-tags 
+                {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 10px;
+            
+                    a 
+                    {
+                        box-shadow: var(--shadow-l1);
+                        padding: 2.5px 20px;
+                        color: var(--text-normal);
+                        text-decoration: none;
+                        font-size: .85rem;
+                        border-radius: 5px;
+                        border: 1px solid black;
+                        transition: box-shadow 0.3s ease;
+            
+                        &:hover 
+                        {
+                            box-shadow: var(--shadow-l2);
+                        }
+                    }
+                }
+            }
+
+            &.categoriesCloud 
+            {
+                .categoriesCloud-categories
+                {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 10px;
+            
+                    a 
+                    {
+                        box-shadow: var(--shadow-l1);
+                        padding: 2.5px 20px;
+                        color: var(--text-normal);
+                        text-decoration: none;
+                        font-size: .85rem;
+                        border-radius: 5px;
+                        border: 1px solid black;
+                        transition: box-shadow 0.3s ease;
+            
+                        &:hover 
+                        {
+                            box-shadow: var(--shadow-l2);
+                        }
+                    }
+                }
+            }
+        }
     }
 }
