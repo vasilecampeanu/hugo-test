@@ -1,6 +1,13 @@
 <div class="main-wrapper blog">
+    {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+    {{ $notHidden := where .Site.RegularPages "Params.hidden" "!=" true }}
+    {{ $filtered := ($pages | intersect $notHidden) }}
+    {{ $pag := .Paginate ($filtered) }}
+    
     <section class="article-list">
-        Article list
+        {{ range $index, $element := $pag.Pages }}
+            {{ partial "article-list/default" . }}
+        {{ end }}
     </section>
     <aside class="sidebar right-sidebar sticky">
         Right

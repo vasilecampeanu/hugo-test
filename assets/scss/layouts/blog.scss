@@ -4,19 +4,17 @@ main .main-wrapper.blog
     grid-template-areas: 
     "main_content right_sidebar";
     gap: 2rem;
-    grid-template-columns: 1fr 25%;
+    grid-template-columns: 1fr 27.5%;
  
     // height: 100vh;
 
     .article-list
     {
         grid-area: main_content;
-        background-color: orange;
     }
 
     aside.sidebar.right-sidebar
     {
         grid-area: right_sidebar;
-        background-color: yellow;
     }
 }
