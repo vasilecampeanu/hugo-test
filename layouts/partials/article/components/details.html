@@ -16,11 +16,12 @@
             </a>
         </h2>
     
-        {{ with .Params.description }}
         <h3 class="article-description">
-            {{ . }}
+            {{ with .Params.description }}
+                {{ . }}
+            {{ end }}
+            <a href="{{ .RelPermalink }}">(read more)</a>
         </h3>
-        {{ end }}
     </div>
 
     {{ if or (not .Date.IsZero) (.Site.Params.article.readingTime) }}

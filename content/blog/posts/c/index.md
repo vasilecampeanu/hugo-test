@@ -1,6 +1,6 @@
 ---
 author: "Vasile Campeanu"
-title: "C: This is just a regular test"
+title: "The Power of Information in Our Lifes"
 date: "2022-03-30"
 description: "This is jus a description"
 tags: ["letter"]

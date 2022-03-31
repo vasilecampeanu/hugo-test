@@ -1,8 +1,8 @@
 ---
 author: "Vasile Campeanu"
-title: "A: This is just a regular test"
+title: "Hello World!"
 date: "2022-03-30"
-description: "This is jus a description"
+description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec velit enim, finibus consequat libero at, sagittis convallis tortor."
 tags: ["letter"]
 categories: ["test"]
 image: "banner.jpg"

@@ -1,8 +1,8 @@
 ---
 author: "Vasile Campeanu"
-title: "F: This is just a regular test"
+title: "Homo Deus"
 date: "2022-03-30"
-description: "This is jus a description"
+description: "This is just a description"
 tags: ["letter"]
 categories: ["test"]
 image: "banner.jpg"

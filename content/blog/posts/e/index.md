@@ -1,6 +1,6 @@
 ---
 author: "Vasile Campeanu"
-title: "E: This is just a regular test"
+title: "This is Just a Regular Test"
 date: "2022-03-30"
 description: "This is jus a description"
 tags: ["letter"]
