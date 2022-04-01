@@ -112,20 +112,21 @@ main .main-wrapper.blog
                 header
                 {
                     padding-top: 5px;
+                    
                     &.article-category
                     {
-                        a
+                        a 
                         {
-                            text-decoration: none;
-                            color: var(--text-normal);
-                            border: 1px solid black;
-                            padding: 2.5px 20px;
-                            border-radius: 5px;
-                            margin-right: 10px;
-                            font-size: .85rem;
                             box-shadow: var(--shadow-l1);
-
-                            &:hover
+                            padding: 5px 20px;
+                            color: var(--text-normal);
+                            text-decoration: none;
+                            font-size: .85rem !important;
+                            border-radius: 5px;
+                            border: 1px solid black;
+                            transition: box-shadow 0.3s ease;
+                
+                            &:hover 
                             {
                                 box-shadow: var(--shadow-l2);
                             }
