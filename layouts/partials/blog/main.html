@@ -27,7 +27,7 @@
         {{ range $index, $element := $pag.Pages }}
             {{ partial "article-list/default" . }}
         {{ end }}
-        {{ partial "pagination.html" . }}
+        {{ partial "helper/pagination.html" . }}
     </section>
     <div>
         <aside class="sidebar right-sidebar sticky">
