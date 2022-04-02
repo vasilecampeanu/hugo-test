@@ -38,7 +38,7 @@ header nav.navbar.desktop
             padding: 0px;
             
             display: flex;
-            height: 40px;
+            height: 80px;
 
             li
             {
@@ -47,6 +47,10 @@ header nav.navbar.desktop
                 
                 padding-left: 20px;
                 align-self: center;
+
+                display: flex;
+                flex-direction: row;
+                align-items: center;
 
                 a
                 {
@@ -79,14 +83,22 @@ header nav.navbar.desktop
     {
         grid-area: actions;
         align-self: center;
-        margin-left: 25px;
+        margin-left: 15px;
 
         ul
         {
+            height: 80px;
+            display: flex;
+
             li
             {
-                display: inline;
+                padding-left: 15px;
+                align-self: center;
                 list-style: none;
+
+                display: flex;
+                flex-direction: row;
+                align-items: center;
                 
                 i
                 {
