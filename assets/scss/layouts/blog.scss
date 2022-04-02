@@ -5,8 +5,6 @@ main .main-wrapper.blog
     "left_sidebar main_content right_sidebar";
     gap: 1.5rem;
     grid-template-columns: 22.5% 1fr 22.5%;
- 
-    // height: 100vh;
 
     aside.sidebar
     {
@@ -51,7 +49,7 @@ main .main-wrapper.blog
                         i
                         {
                             color: var(--text-accent);
-                            transition: all .325s;
+                            transition: all var(--hover-transition);
                         }
                     }
 
@@ -80,8 +78,8 @@ main .main-wrapper.blog
             // background-color: rebeccapurple;
             margin-bottom: 36px;
             border-radius: 15px;
-            border: 2px solid black;
-
+            border: 2px solid var(--border-color);
+            background-color: var(--background-secondary);
             box-shadow: var(--shadow-l1);
 
             &:hover
@@ -117,18 +115,20 @@ main .main-wrapper.blog
                     {
                         a 
                         {
+                            background-color: var(--background-primary);
                             box-shadow: var(--shadow-l1);
                             padding: 5px 20px;
                             color: var(--text-normal);
                             text-decoration: none;
                             font-size: .85rem !important;
                             border-radius: 5px;
-                            border: 1px solid black;
-                            transition: box-shadow 0.3s ease;
+                            border: 1px solid var(--border-color);
+                            transition: box-shadow var(--hover-transition) ease;
                 
                             &:hover 
                             {
                                 box-shadow: var(--shadow-l2);
+                                text-decoration: underline;
                             }
                         }
                     }
@@ -145,7 +145,7 @@ main .main-wrapper.blog
                         {
                             text-decoration: none;
                             color: var(--text-accent);
-                            transition: all .325s;
+                            transition: all var(--hover-transition);
 
                             &:hover
                             {
@@ -156,8 +156,8 @@ main .main-wrapper.blog
 
                     .article-description
                     {
-                        border-top: 1px solid black;
-                        border-bottom: 1px solid black;
+                        border-top: 1px solid var(--border-color);
+                        border-bottom: 1px solid var(--border-color);
                         padding: 10px 0px;
                         font-size: 1rem;
                         font-weight: normal;
@@ -226,9 +226,9 @@ main .main-wrapper.blog
         {
             margin-bottom: 20px;
 
-            &.tagCloud 
+            &.tagCloud
             {
-                .tagCloud-tags 
+                .tagCloud-tags
                 {
                     display: flex;
                     flex-wrap: wrap;
@@ -236,24 +236,26 @@ main .main-wrapper.blog
             
                     a 
                     {
+                        background-color: var(--background-secondary);
                         box-shadow: var(--shadow-l1);
                         padding: 2.5px 20px;
                         color: var(--text-normal);
                         text-decoration: none;
                         font-size: .85rem;
                         border-radius: 5px;
-                        border: 1px solid black;
-                        transition: box-shadow 0.3s ease;
+                        border: 1px solid var(--border-color);
+                        transition: box-shadow var(--hover-transition) ease;
             
                         &:hover 
                         {
                             box-shadow: var(--shadow-l2);
+                            text-decoration: underline;
                         }
                     }
                 }
             }
 
-            &.categoriesCloud 
+            &.categoriesCloud
             {
                 .categoriesCloud-categories
                 {
@@ -263,18 +265,20 @@ main .main-wrapper.blog
             
                     a 
                     {
+                        background-color: var(--background-secondary);
                         box-shadow: var(--shadow-l1);
                         padding: 2.5px 20px;
                         color: var(--text-normal);
                         text-decoration: none;
                         font-size: .85rem;
                         border-radius: 5px;
-                        border: 1px solid black;
-                        transition: box-shadow 0.3s ease;
+                        border: 1px solid var(--border-color);
+                        transition: box-shadow var(--hover-transition) ease;
             
                         &:hover 
                         {
                             box-shadow: var(--shadow-l2);
+                            text-decoration: underline;
                         }
                     }
                 }

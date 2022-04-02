@@ -59,7 +59,7 @@ header nav.navbar.desktop
                         color: var(--text-accent);
                     }
                     
-                    transition: all .325s;
+                    transition: all var(--hover-transition);
 
                     &:hover
                     {
@@ -79,12 +79,7 @@ header nav.navbar.desktop
     {
         grid-area: actions;
         align-self: center;
-        font-weight: bold;
-        // background-color: red;
-        margin-left: 20px;
-        padding-left: 10px;
-        border-left: 2px solid black;
-        line-height: 20px;
+        margin-left: 25px;
 
         ul
         {
@@ -96,8 +91,8 @@ header nav.navbar.desktop
                 i
                 {
                     cursor: pointer;
-                    font-size: 1.2rem;
-                    transition: all .325s;
+                    font-size: 1.25rem;
+                    transition: all var(--hover-transition);
 
                     &:hover
                     {

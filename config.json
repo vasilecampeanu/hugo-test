@@ -5,16 +5,8 @@
    "paginate": 5,
    "params":
    {
-        "mainSections": "blog/posts",
-        "defaultImage": 
-        {
-            "opengraph": 
-            {
-                "enabled": "false",
-                "local": "false",
-                "src": "null"
-            }
-        },
+        "mainSections": "blog/post/",
+        "defaultImage": {},
         "article":
         {
             "readingTime": "true"

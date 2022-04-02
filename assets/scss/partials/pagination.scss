@@ -6,17 +6,18 @@
     overflow: hidden;
     flex-wrap: wrap;
     // justify-content: center;
-    border: 2px solid black;
+    border: 2px solid var(--border-color);
 
     margin-bottom: 10px;
 
     .page-link 
     {
+        background-color: var(--background-secondary);
         cursor: pointer;
         padding: 8px 32px;
         display: inline-flex;
         font-weight: bold;
-        border-right: 2px solid black;
+        border-right: 2px solid var(--border-color);
 
         &.current 
         {
