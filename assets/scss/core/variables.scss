@@ -17,7 +17,7 @@
 :root
 {
     --background-primary: #ffffff;
-    --background-secondary: #ffffff;
+    --background-secondary-01: #ffffff;
     --text-normal: #000000;
     --text-accent: #4C6EF5;
     --text-accent-hover: #F5D34C;
@@ -34,6 +34,7 @@
 :root
 {
     --hover-transition: 0.325s;
+    --description-hover-transition: 0.225s;
 }
 
 // Shadow layouts
@@ -48,15 +49,28 @@
 .drak-macos
 {
     --background-primary: #221D29;
-    --background-secondary: #2B2631;
+    --background-secondary-01: #2B2631;
     --text-normal: #ffffff;
     --border-color: #757179;
 }
 
+// .dark-theme
+// {
+//     --background-primary: #0E141B;
+//     --background-secondary-01: #232830;
+//     --background-secondary-02: #363C43;
+//     --text-normal: #ffffff;
+//     --border-color: #2c2f35;
+// }
+
 .dark-theme
 {
     --background-primary: #0E141B;
-    --background-secondary: #141D24;
+    --background-secondary-01: rgb(27, 32, 37);
+    --background-secondary-02: #363C43;
     --text-normal: #ffffff;
-    --border-color: #3f3e41;
+    --border-color: #25282e;
+    --article-description-color: #b6bfcb;
+    --border-bottom-to-hover: rgb(255, 255, 255, 0);
+    --border-bottom-hovered: rgb(255, 255, 255, 1);
 }

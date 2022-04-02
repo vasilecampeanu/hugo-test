@@ -8,7 +8,7 @@
     <div class="categoriesCloud-categories">
         {{ range first $limit $context.Site.Taxonomies.categories.ByCount }}
             <a href="{{ .Page.RelPermalink }}" class="font_size_{{ .Count }}">
-                {{ .Page.Title }}
+                <span>{{ .Page.Title }}</span>
             </a>
         {{ end }}
     </div>

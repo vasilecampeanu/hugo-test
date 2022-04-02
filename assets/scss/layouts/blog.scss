@@ -79,12 +79,12 @@ main .main-wrapper.blog
             margin-bottom: 36px;
             border-radius: 15px;
             border: 2px solid var(--border-color);
-            background-color: var(--background-secondary);
-            box-shadow: var(--shadow-l1);
-
+            background-color: var(--background-secondary-01);
+            box-shadow: var(--shadow-l2);
+            transition: all var(--hover-transition);
             &:hover
             {
-                box-shadow: var(--shadow-l2);
+                box-shadow: var(--shadow-l4);
             }
 
             &.has-image
@@ -115,7 +115,7 @@ main .main-wrapper.blog
                     {
                         a 
                         {
-                            background-color: var(--background-primary);
+                            background-color: var(--background-secondary-02);
                             box-shadow: var(--shadow-l1);
                             padding: 5px 20px;
                             color: var(--text-normal);
@@ -125,10 +125,21 @@ main .main-wrapper.blog
                             border: 1px solid var(--border-color);
                             transition: all 500ms;
 
+                            span
+                            {
+                                border-bottom: 1px solid var(--border-bottom-to-hover);
+                                transition: all var(--hover-transition);
+                            }
+                            
+                            &:hover span
+                            {
+                                border-bottom: 1px solid var(--border-bottom-hovered);
+                            }
+
                             &:hover 
                             {
                                 box-shadow: var(--shadow-l2);
-                                text-decoration: underline;
+                                // text-decoration: underline;
                             }
                         }
                     }
@@ -161,13 +172,20 @@ main .main-wrapper.blog
                         padding: 10px 0px;
                         font-size: 1rem;
                         font-weight: normal;
+                        color: var(--article-description-color);
+                        transition: all var(--description-hover-transition);
+                        &:hover
+                        {
+                            color: var(--text-normal);
+                        }
 
                         a
                         {
                             color: var(--text-accent);
                             text-decoration: underline;
                             font-weight: bold;
-                            
+                            transition: all var(--hover-transition);
+
                             &:hover
                             {
                                 color: var(--text-accent-hover);
@@ -236,7 +254,7 @@ main .main-wrapper.blog
             
                     a 
                     {
-                        background-color: var(--background-secondary);
+                        background-color: var(--background-secondary-02);
                         box-shadow: var(--shadow-l1);
                         padding: 2.5px 20px;
                         color: var(--text-normal);
@@ -246,10 +264,20 @@ main .main-wrapper.blog
                         border: 1px solid var(--border-color);
                         transition: all 500ms;
             
+                        span
+                        {
+                            border-bottom: 1px solid var(--border-bottom-to-hover);
+                            transition: all var(--hover-transition);
+                        }
+                        
+                        &:hover span
+                        {
+                            border-bottom: 1px solid var(--border-bottom-hovered);
+                        }
+
                         &:hover 
                         {
                             box-shadow: var(--shadow-l2);
-                            text-decoration: underline;
                         }
                     }
                 }
@@ -265,7 +293,7 @@ main .main-wrapper.blog
             
                     a 
                     {
-                        background-color: var(--background-secondary);
+                        background-color: var(--background-secondary-02);
                         box-shadow: var(--shadow-l1);
                         padding: 2.5px 20px;
                         color: var(--text-normal);
@@ -274,11 +302,21 @@ main .main-wrapper.blog
                         border-radius: 5px;
                         border: 1px solid var(--border-color);
                         transition: all 500ms;
-            
+                        
+                        span
+                        {
+                            border-bottom: 1px solid var(--border-bottom-to-hover);
+                            transition: all var(--hover-transition);
+                        }
+                        
+                        &:hover span
+                        {
+                            border-bottom: 1px solid var(--border-bottom-hovered);
+                        }
+
                         &:hover 
                         {
                             box-shadow: var(--shadow-l2);
-                            text-decoration: underline;
                         }
                     }
                 }
