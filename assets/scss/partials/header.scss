@@ -81,16 +81,29 @@ header nav.navbar.desktop
         align-self: center;
         font-weight: bold;
         // background-color: red;
-        margin-left: 30px;
+        margin-left: 20px;
         padding-left: 10px;
         border-left: 2px solid black;
         line-height: 20px;
+
         ul
         {
             li
             {
                 display: inline;
                 list-style: none;
+                
+                i
+                {
+                    cursor: pointer;
+                    font-size: 1.2rem;
+                    transition: all .325s;
+
+                    &:hover
+                    {
+                        color: var(--text-accent-hover);
+                    }
+                }
             }
         }
     }
