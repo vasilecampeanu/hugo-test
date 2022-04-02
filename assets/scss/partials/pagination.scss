@@ -18,7 +18,8 @@
         display: inline-flex;
         font-weight: bold;
         border-right: 2px solid var(--border-color);
-
+        transition: all 500ms;
+        
         &.current 
         {
             box-shadow: var(--shadow-l1);

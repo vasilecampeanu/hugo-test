@@ -123,8 +123,8 @@ main .main-wrapper.blog
                             font-size: .85rem !important;
                             border-radius: 5px;
                             border: 1px solid var(--border-color);
-                            transition: box-shadow var(--hover-transition) ease;
-                
+                            transition: all 500ms;
+
                             &:hover 
                             {
                                 box-shadow: var(--shadow-l2);
@@ -244,7 +244,7 @@ main .main-wrapper.blog
                         font-size: .85rem;
                         border-radius: 5px;
                         border: 1px solid var(--border-color);
-                        transition: box-shadow var(--hover-transition) ease;
+                        transition: all 500ms;
             
                         &:hover 
                         {
@@ -273,7 +273,7 @@ main .main-wrapper.blog
                         font-size: .85rem;
                         border-radius: 5px;
                         border: 1px solid var(--border-color);
-                        transition: box-shadow var(--hover-transition) ease;
+                        transition: all 500ms;
             
                         &:hover 
                         {

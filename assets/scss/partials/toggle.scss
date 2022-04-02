@@ -11,9 +11,9 @@
     height: var(--size);
     box-shadow: inset calc(var(--size) * 0.33) calc(var(--size) * -0.25) 0;
     border-radius: 999px;
-    color: hsl(240, 100%, 95%);
+    color: var(--text-normal);
     
-    transition: all 500ms;
+    transition: all var(--hover-transition);
     
     &:checked 
     {
@@ -33,5 +33,10 @@
         var(--offset-diagonal) var(--offset-diagonal) 0 var(--ray-size),
         calc(var(--offset-diagonal) * -1) var(--offset-diagonal) 0 var(--ray-size),
         var(--offset-diagonal) calc(var(--offset-diagonal) * -1) 0 var(--ray-size);
+    }
+
+    &:hover
+    {
+        color: var(--text-accent-hover);
     }
 }
