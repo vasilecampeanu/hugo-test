@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     {{ partial "head/head.html" . }}
-    {{ block "style" . }}{{ end }}
 </head>
 <body>
     <div class="site-wrapper">
@@ -15,7 +14,7 @@
         <footer id="footer">
             {{ block "footer" . }}{{ end }}
         </footer>
-        {{ partial "footer/include.html" . }}
+        {{ partial "components/footer/include.html" . }}
     </div>
 </body>
 </html>

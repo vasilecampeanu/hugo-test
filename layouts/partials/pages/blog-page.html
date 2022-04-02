@@ -25,13 +25,13 @@
     </div>
     <section class="article-list">
         {{ range $index, $element := $pag.Pages }}
-            {{ partial "article-list/default" . }}
+            {{ partial "article/article-list/default.html" . }}
         {{ end }}
         {{ partial "helper/pagination.html" . }}
     </section>
     <div>
         <aside class="sidebar right-sidebar sticky">
-            {{ partial "rightSidebar.html" (dict "Context" . "Scope" "blogpage") }}
+            {{ partial "components/rightSidebar.html" (dict "Context" . "Scope" "blogpage") }}
         </aside>
     </div>
 </div>
