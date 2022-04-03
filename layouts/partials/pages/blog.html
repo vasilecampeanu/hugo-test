@@ -3,7 +3,6 @@
     {{ $notHidden := where .Site.RegularPages "Params.hidden" "!=" true }}
     {{ $filtered := ($pages | intersect $notHidden) }}
     {{ $pag := .Paginate ($filtered) }}
-
     <div>
         <aside class="sidebar left-sidebar sticky">
             <div>
