@@ -13,6 +13,7 @@ header nav.navbar.desktop
         grid-area: logo;
         align-self: center;
         font-size: 1.75rem;
+        font-size: var(--font-size-lg);
 
         a
         {
@@ -57,6 +58,8 @@ header nav.navbar.desktop
                     text-decoration: none;
                     color: var(--text-normal);
                     font-weight: bold;
+
+                    font-size: var(--font-size-xsm);
 
                     &.active
                     {
@@ -103,9 +106,10 @@ header nav.navbar.desktop
                 i
                 {
                     cursor: pointer;
-                    font-size: 1.25rem;
+                    font-size: var(--font-size-sm);
                     transition: all var(--hover-transition);
                     color: var(--text-normal);
+
                     &:hover
                     {
                         color: var(--text-accent-hover);
@@ -139,6 +143,8 @@ header nav.navbar.desktop
                             
                             transition: all var(--hover-transition);
                             
+                            font-size: var(--font-size-xxsm);
+
                             text-transform: uppercase;
                             text-decoration: none;
 

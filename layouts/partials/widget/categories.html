@@ -4,11 +4,11 @@
     <div class="widget-icon">
         {{ partial "helper/icon" "categories" }}
     </div>
-    <h2 class="widget-title section-title">CATEGORIES</h2>
+    <span class="widget-title section-title">CATEGORIES</span>
     <div class="categoriesCloud-categories">
         {{ range first $limit $context.Site.Taxonomies.categories.ByCount }}
-            <a href="{{ .Page.RelPermalink }}" class="font_size_{{ .Count }}">
-                <span>{{ .Page.Title }}</span>
+            <a href="{{ .Page.RelPermalink }}">
+                {{ .Page.Title }}
             </a>
         {{ end }}
     </div>

@@ -25,7 +25,7 @@ main .main-wrapper.blog
 
         .popular-posts-title
         {
-            font-size: 1.2rem;
+            font-size: var(--font-size-sm);
             font-weight: bold;
             padding-bottom: 10px;
         }
@@ -58,6 +58,7 @@ main .main-wrapper.blog
                         color: var(--text-normal);
                         text-decoration: none;
                         font-weight: bold;
+                        font-size: var(--font-size-xsm);
                     }
                 }
 
@@ -76,12 +77,13 @@ main .main-wrapper.blog
         article
         {
             // background-color: rebeccapurple;
-            margin-bottom: 36px;
+            margin-bottom: 20px;
             border-radius: 15px;
             border: 2px solid var(--border-color);
             background-color: var(--background-secondary-01);
             box-shadow: var(--shadow-l2);
             transition: all var(--hover-transition);
+
             &:hover
             {
                 box-shadow: var(--shadow-l4);
@@ -120,16 +122,10 @@ main .main-wrapper.blog
                             padding: 5px 20px;
                             color: var(--text-normal);
                             text-decoration: none;
-                            font-size: .85rem !important;
                             border-radius: 5px;
                             border: 1px solid var(--border-color);
-                            transition: all 500ms;
-
-                            span
-                            {
-                                border-bottom: 1px solid var(--border-bottom-to-hover);
-                                transition: all var(--hover-transition);
-                            }
+                            font-weight: bold;
+                            font-size: var(--font-size-xxsm);
 
                             &:hover 
                             {
@@ -142,16 +138,17 @@ main .main-wrapper.blog
 
                 .article-title-wrapper
                 {
-                    margin-top: 7.5px;
+                    margin-top: 5px;
 
                     .article-title
                     {
-                        
                         a
                         {
                             text-decoration: none;
                             color: var(--text-accent);
                             transition: all var(--hover-transition);
+
+                            font-size: var(--font-size-m);
 
                             &:hover
                             {
@@ -162,13 +159,17 @@ main .main-wrapper.blog
 
                     .article-description
                     {
-                        border-top: 1px solid var(--border-color);
-                        border-bottom: 1px solid var(--border-color);
+                        border-top: 2px solid var(--border-color);
+                        border-bottom: 2px solid var(--border-color);
                         padding: 10px 0px;
-                        font-size: 1rem;
                         font-weight: normal;
                         color: var(--article-description-color);
                         transition: all var(--description-hover-transition);
+                        
+                        margin-top: 10px;
+                        
+                        font-size: var(--font-size-xsm);
+
                         &:hover
                         {
                             color: var(--text-normal);
@@ -191,7 +192,8 @@ main .main-wrapper.blog
 
                 footer
                 {
-                    margin-top: 5px;
+                    margin-top: 10px;
+
                     &.article-time, &.article-translations 
                     {
                         display: flex;
@@ -199,18 +201,18 @@ main .main-wrapper.blog
                         color: var(--text-normal);
                         gap: 15px;
                         flex-wrap: wrap;
-    
+
                         svg 
                         {
                             vertical-align: middle;
-                            width: 20px;
-                            height: 20px;
+                            width: 18px;
+                            height: 18px;
                             stroke-width: 1.33;
                         }
                     
                         time
                         {
-                            font-size: 1rem;
+                            font-size: var(--font-size-xxsm);
                             color: var(--text-normal);
                         }
                     
@@ -230,7 +232,7 @@ main .main-wrapper.blog
     {
         grid-area: right_sidebar;
 
-        &.sticky 
+        &.sticky
         {
             top: 25px;
         }
@@ -238,6 +240,8 @@ main .main-wrapper.blog
         .widget
         {
             margin-bottom: 20px;
+            font-size: var(--font-size-sm);
+            font-weight: bold;
 
             &.tagCloud
             {
@@ -254,7 +258,8 @@ main .main-wrapper.blog
                         padding: 2.5px 20px;
                         color: var(--text-normal);
                         text-decoration: none;
-                        font-size: .85rem;
+                        font-weight: bold;
+                        font-size: var(--font-size-xxsm);
                         border-radius: 5px;
                         border: 1px solid var(--border-color);
                         transition: all 500ms;
@@ -283,7 +288,8 @@ main .main-wrapper.blog
                         padding: 2.5px 20px;
                         color: var(--text-normal);
                         text-decoration: none;
-                        font-size: .85rem;
+                        font-size: var(--font-size-xxsm);
+                        font-weight: bold;
                         border-radius: 5px;
                         border: 1px solid var(--border-color);
                         transition: all 500ms;
