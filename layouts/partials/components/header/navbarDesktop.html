@@ -9,8 +9,11 @@
             {{ $menu_item_url := .URL | relLangURL }}
             {{ $page_url:= $currentPage.RelPermalink | relLangURL }}
             {{ $icon := default "link" .Params.Icon }}
-            <li><a class="{{ if eq $menu_item_url $page_url }}active{{ end }}" href="{{ .URL }}"><i
-                        class="{{ $icon }}"></i>{{ .Name }}</a></li>
+                <li>
+                    <a class="{{ if eq $menu_item_url $page_url }}active{{ end }}" href="{{ .URL | relLangURL }}">
+                        <i class="{{ $icon }}"></i>{{ .Name }}
+                    </a>
+                </li>
             {{ end }}
         </ul>
     </div>
@@ -24,8 +27,12 @@
                         <i onclick="dropDownFunction()" class="fa-solid fa-earth-europe dropbtn"></i>
                     </button>
                     <div id="dropdown-language-content" class="dropdown-content">
-                        <i class="fa-solid fa-earth-europe"></i>
-                        <i class="fa-solid fa-earth-europe"></i>
+                        {{- $lang := .Lang}}
+                        {{- with $.Site.Home.AllTranslations }}
+                            {{- range . -}}
+                                <a href="{{ .Permalink }}"><i class="fa-solid fa-earth-europe"></i>{{ .Lang | title }}</a>
+                            {{- end}}
+                        {{- end }}
                     </div>
                 </div>
             </li>
