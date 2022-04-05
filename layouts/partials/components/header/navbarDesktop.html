@@ -6,10 +6,11 @@
         <ul>
             {{ $currentPage := . }}
             {{ range .Site.Menus.main }}
-                {{ $menu_item_url := .URL | relLangURL }}
-                {{ $page_url:= $currentPage.RelPermalink | relLangURL }}
-                {{ $icon := default "link" .Params.Icon }}
-                <li><a class="{{ if eq $menu_item_url $page_url }}active{{ end }}" href="{{ .URL }}"><i class="{{ $icon }}"></i>{{ .Name }}</a></li>
+            {{ $menu_item_url := .URL | relLangURL }}
+            {{ $page_url:= $currentPage.RelPermalink | relLangURL }}
+            {{ $icon := default "link" .Params.Icon }}
+            <li><a class="{{ if eq $menu_item_url $page_url }}active{{ end }}" href="{{ .URL }}"><i
+                        class="{{ $icon }}"></i>{{ .Name }}</a></li>
             {{ end }}
         </ul>
     </div>
@@ -17,7 +18,17 @@
         <ul>
             <li><i class="fa-solid fa-magnifying-glass"></i></li>
             <li><input id="toggle" class="toggle" type="checkbox" /></li>
-            <li><i class="fa-solid fa-earth-europe"></i></li>
+            <li>
+                <div class="dropdown-language">
+                    <button>
+                        <i onclick="dropDownFunction()" class="fa-solid fa-earth-europe dropbtn"></i>
+                    </button>
+                    <div id="dropdown-language-content" class="dropdown-content">
+                        <i class="fa-solid fa-earth-europe"></i>
+                        <i class="fa-solid fa-earth-europe"></i>
+                    </div>
+                </div>
+            </li>
         </ul>
     </div>
 </nav>
@@ -25,30 +36,52 @@
 <script>
     var icon = document.getElementById("toggle")
 
-    icon.onclick = function() {
+    icon.onclick = function () {
         document.body.classList.toggle("dark-theme");
     }
 </script>
 
 <script>
-    (function() {
+    (function () {
         const links = document.getElementsByTagName('a')
         const current_url = location.href;
         const post_page = "/post";
 
         console.log(current_url.includes(post_page));
-        
-        if(current_url.includes(post_page))
-        {
+
+        if (current_url.includes(post_page)) {
             const blog_url = current_url.substring(0, current_url.lastIndexOf(post_page)) + '/';
-            
-            for (const link of links) 
-            {
-                if (link.href === blog_url) 
-                {
+
+            for (const link of links) {
+                if (link.href === blog_url) {
                     link.classList.add('active')
                 }
             }
         }
     }())
+</script>
+
+<script>
+
+    function dropDownFunction() {
+        document.getElementById("dropdown-language-content").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function (event) {
+        if (!event.target.matches('.dropbtn')) 
+        {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            
+            for (i = 0; i < dropdowns.length; i++) 
+            {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) 
+                {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
 </script>

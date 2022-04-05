@@ -130,16 +130,11 @@ main .main-wrapper.blog
                                 border-bottom: 1px solid var(--border-bottom-to-hover);
                                 transition: all var(--hover-transition);
                             }
-                            
-                            &:hover span
-                            {
-                                border-bottom: 1px solid var(--border-bottom-hovered);
-                            }
 
                             &:hover 
                             {
                                 box-shadow: var(--shadow-l2);
-                                // text-decoration: underline;
+                                text-decoration: underline;
                             }
                         }
                     }
@@ -263,21 +258,11 @@ main .main-wrapper.blog
                         border-radius: 5px;
                         border: 1px solid var(--border-color);
                         transition: all 500ms;
-            
-                        span
-                        {
-                            border-bottom: 1px solid var(--border-bottom-to-hover);
-                            transition: all var(--hover-transition);
-                        }
-                        
-                        &:hover span
-                        {
-                            border-bottom: 1px solid var(--border-bottom-hovered);
-                        }
 
                         &:hover 
                         {
                             box-shadow: var(--shadow-l2);
+                            text-decoration: underline;
                         }
                     }
                 }
@@ -303,20 +288,10 @@ main .main-wrapper.blog
                         border: 1px solid var(--border-color);
                         transition: all 500ms;
                         
-                        span
-                        {
-                            border-bottom: 1px solid var(--border-bottom-to-hover);
-                            transition: all var(--hover-transition);
-                        }
-                        
-                        &:hover span
-                        {
-                            border-bottom: 1px solid var(--border-bottom-hovered);
-                        }
-
                         &:hover 
                         {
                             box-shadow: var(--shadow-l2);
+                            text-decoration: underline;
                         }
                     }
                 }
