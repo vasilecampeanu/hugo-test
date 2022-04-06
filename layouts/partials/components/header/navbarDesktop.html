@@ -41,6 +41,10 @@
 </nav>
 
 <script>
+    document.getElementById('toggle').addEventListener('change', function(event) {
+        (event.target.checked) ? document.body.setAttribute('data-theme', 'dark') : document.body.setAttribute('data-theme', 'light');
+    });
+
     var icon  = document.getElementById("toggle");
 
     // Set a local item "theme" as default for the first time when the user enters the site
@@ -53,6 +57,15 @@
     else
     {
         window.localStorage.setItem("theme", "default");
+    }
+
+    if(theme === "light")
+    {
+        document.body.setAttribute('data-theme', 'light');
+    }
+    else
+    {
+        document.body.setAttribute('data-theme', 'dark');
     }
 
     if(theme === "light")
