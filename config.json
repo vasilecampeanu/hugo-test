@@ -35,13 +35,13 @@
                         }
                     },
                     {
-                        "identifier": "projects",
-                        "name": "Projects",
-                        "url": "/projects/",
+                        "identifier": "scrapbook",
+                        "name": "Scrapbook",
+                        "url": "/scrapbook/",
                         "weight": 3,
                         "params": 
                         {
-                            "icon": "fa-solid fa-cube"
+                            "icon": "fa-solid fa-folder"
                         }
                     },
                     {
@@ -97,9 +97,9 @@
                         }
                     },
                     {
-                        "identifier": "projects",
-                        "name": "Proiecte",
-                        "url": "/projects/",
+                        "identifier": "scrapbook",
+                        "name": "Scrapbook",
+                        "url": "/scrapbook/",
                         "weight": 3,
                         "params": 
                         {
