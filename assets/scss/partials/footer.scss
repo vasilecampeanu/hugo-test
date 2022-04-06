@@ -1,0 +1,64 @@
+footer
+{
+    display: grid;
+    grid-template-areas: "left right";
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px 0px;
+    font-size: var(--font-size-xsm);
+    .left
+    {
+        grid-area: left;
+        justify-self: start;
+        align-self: center;
+    }
+    
+    .right
+    {
+        grid-area: right;
+        justify-self: end;
+        align-self: center;
+
+        ul
+        {
+            li
+            {
+                display: inline;
+                margin-left: 7.5px;
+                cursor: pointer;
+
+                a
+                {
+                    text-decoration: none;
+                    color: var(--text-normal);
+                    transition: var(--hover-transition);
+                    &:hover
+                    {
+                        color: var(--text-accent-hover);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px)
+{
+    footer 
+    {
+        grid-template-areas: 
+        "left"
+        "right";
+        grid-template-columns: 1fr;
+
+        .left
+        {
+            justify-self: center;
+        }
+
+        .right
+        {
+            padding-top: 5px;
+            justify-self: center;
+        }
+    }
+}

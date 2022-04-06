@@ -25,7 +25,7 @@
     </div>
 
     {{ if or (not .Date.IsZero) (.Site.Params.article.readingTime) }}
-        <footer class="article-time">
+        <section class="article-time">
             {{ if not .Date.IsZero }}
                 <div>
                     {{ partial "helper/icon" "date" }}
@@ -43,17 +43,17 @@
                     </time>
                 </div>
             {{ end }}
-        </footer>
+        </section>
     {{ end }}
 
     {{ if .IsTranslated }}
-        <footer class="article-translations">
+        <section class="article-translations">
             {{ partial "helper/icon" "language" }}
             <div>
                 {{ range .Translations }}
                     <a href="{{ .Permalink }}" class="link">{{ .Language.LanguageName }}</a>
                 {{ end }}
             </div>
-        </footer>
+        </section>
     {{ end }}
 </div>
