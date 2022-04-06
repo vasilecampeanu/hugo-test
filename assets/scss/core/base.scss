@@ -21,6 +21,13 @@ body
     max-width: 1536px;
     padding: 0px 20px;
 
+    transition: opacity 0.5s ease-out, width .3s, transform .3s;
+
+    /* Loading transition */
+    
+    opacity: 0;
+    display: none; 
+
     header
     {
         grid-area: header;
@@ -35,6 +42,16 @@ body
     {
         grid-area: footer;
     }
+}
+
+.show 
+{
+    display: block !important;
+}
+
+.hide-overflow
+{
+    overflow: hidden !important;
 }
 
 @media screen and (max-width: 1220px)

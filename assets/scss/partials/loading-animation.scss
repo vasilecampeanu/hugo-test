@@ -1,0 +1,13 @@
+.loader
+{
+    display: grid;
+    position: absolute;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.loader lottie-player
+{
+    justify-self: center;
+    align-self: center;
+}
