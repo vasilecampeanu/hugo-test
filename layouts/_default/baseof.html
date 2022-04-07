@@ -6,9 +6,9 @@
 </head>
 <body id="body" class="dark-theme">
     <div class="loader">
-        {{ $loading_animation := resources.Get "json/loadin_animation.json" }}
+        {{ $loadingAnimation := resources.Get "json/loadingAnimation.json" }}
         <!-- Credit: https://lottiefiles.com/xta6vx5dtr -->
-        <lottie-player id="loading-animation" src="{{ $loading_animation.RelPermalink }}" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+        <lottie-player id="loading-animation" src="{{ $loadingAnimation.RelPermalink }}" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
     </div>
     <div class="site-wrapper">
         <header id="header">

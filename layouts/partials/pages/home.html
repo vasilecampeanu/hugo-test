@@ -1,0 +1,41 @@
+{{ $meditationAnimation := resources.Get "json/meditationAnimation.json" }}
+
+{{ $item01 := resources.Get "svg/circle-dark.svg" }}
+{{ $item02 := resources.Get "svg/circle-dark.svg" }}
+{{ $item03 := resources.Get "svg/circle-dark.svg" }}
+{{ $item04 := resources.Get "svg/circle-dark.svg" }}
+
+<div class="main-wrapper home">
+    <div class="introduction">
+        <!-- Who I am ? -->
+        <div class="about">
+            <div class="subtitle">
+                <p>Hi, I'm Vasile Câmpeanu - </p>
+            </div>
+            <div class="title">
+                <h1>I'm a student, currently studying computer science at <a href="https://www.umfst.ro/en/home.html">UMFST</a> Târgu Mureș</h1>
+            </div>
+            <div class="info">
+                <p>I am passionate about <span>artificial inteligence</span>, <span>bioinformatics</span> and <span>single-cell genomics</span>. My biggest interest lays in understanding the human genom from a computational standpoint. <a href="/about/">(more about me...)</a></p>
+            </div>
+        </div>
+        <div class="animation">
+            <div class="item item-1">
+                <object data="{{ $item01.RelPermalink }}" type=""></object>
+            </div>
+            <div class="item item-2">
+                <object data="{{ $item02.RelPermalink }}" type=""></object>
+            </div>
+            <div class="center">
+                <lottie-player src="{{ $meditationAnimation.RelPermalink }}"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+                <!-- Credit: https://lottiefiles.com/Mikhail_V94 -->
+            </div>
+            <div class="item item-3">
+                <object data="{{ $item03.RelPermalink }}" type=""></object>
+            </div>
+            <div class="item item-4">
+                <object data="{{ $item04.RelPermalink }}" type=""></object>
+            </div>
+        </div>
+    </div>
+</div>

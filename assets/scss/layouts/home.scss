@@ -1,3 +1,260 @@
-main
+main .main-wrapper.home
 {
+    .introduction
+    {
+        display: grid;
+        grid-template-areas: 
+        "about animation";
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+
+        gap: 20px;
+
+        min-height: calc(100vh - 80px - 40px);
+
+        .about
+        {
+            grid-area: about;
+            justify-self: center;
+            align-self: center;
+            display: grid;
+            justify-content: center;
+
+            .subtitle
+            {
+                p
+                {
+                    font-size: var(--font-size-xsm);
+                }
+            }
+
+            .title
+            {
+                h1
+                {
+                    font-size: var(--font-size-lg);
+                    
+                    a
+                    {
+                        color: var(--text-accent);
+                        font-weight: bold;
+                        transition: all var(--hover-transition);
+    
+                        &:hover
+                        {
+                            color: var(--text-accent-hover);
+                        }
+                    }
+                }
+            }
+
+            .info
+            {
+                p
+                {
+                    font-size: var(--font-size-xsm);
+                    
+                    span
+                    {
+                        font-weight: bold;
+                    }
+                    
+                    a
+                    {
+                        color: var(--text-accent);
+                        font-weight: bold;
+                        transition: all var(--hover-transition);
+    
+                        &:hover
+                        {
+                            color: var(--text-accent-hover);
+                        }
+                    }
+                }
+            }
+        }
+
+        .animation
+        {
+            grid-area: animation;
+
+            grid-area: animation;
+            justify-self: center;
+            align-self: center;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            grid-template-areas: 
+            "a a vcenter-u b b"
+            "a a vcenter-u b b"
+            "hcenter-l hcenter-l center hcenter-r hcenter-r"
+            "c c vcenter-b d d"
+            "c c vcenter-b d d";
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            gap: .5rem;
+            max-height: 575px;
+
+            .item
+            {
+                padding: 5px;
+                border: 2px solid var(--border-color);
+                background-color: var(--background-secondary-01);
+                border-radius: 10px;
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+
+                object
+                {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                &.item-1
+                {
+                    grid-area: a;
+                    justify-self: end;
+                    align-self: end;
+                    width: 90%;
+                    height: 90%;
+                }
+
+                &.item-2
+                {
+                    grid-area: b;
+                    justify-self: start;
+                    align-self: end;
+                    width: 90%;
+                    height: 60%;   
+                }
+
+                &.item-3
+                {
+                    grid-area: c;
+                    justify-self: end;
+                    align-self: start;
+                    width: 90%;
+                    height: 60%;
+                }
+
+                &.item-4
+                {
+                    grid-area: d;
+                    align-self: start;
+                    justify-self: start;
+                    width: 90%;
+                    height: 90%;
+                }
+            }
+
+            .center
+            {
+                grid-area: center;
+                width: 100%;
+                height: 100%;
+                grid-column-start: 2;
+                grid-column-end: 5;
+                grid-row-start: 2;
+                grid-row-end: 5;
+                display: grid;
+                justify-content: center;
+                align-content: center;
+
+                lottie-player
+                {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px)
+{
+    main .main-wrapper.home
+    {
+        .introduction
+        {
+            grid-template-areas: 
+            "animation"
+            "about";
+            grid-template-columns: 1fr;
+            // grid-template-rows: auto;
+
+            .animation
+            {
+                width: 100%;
+
+                .center
+                {
+                    lottie-player
+                    {
+                    }
+                }
+            }
+        }
+    }   
+}
+
+@media screen and (max-width: 768px)
+{
+    main .main-wrapper.home
+    {
+        .introduction
+        {
+            .animation
+            {
+                .center
+                {
+                    lottie-player
+                    {
+                        width: 250px !important;
+                        height: 250px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px)
+{
+    main .main-wrapper.home
+    {
+        .introduction
+        {
+            .animation
+            {
+                .center
+                {
+                    lottie-player
+                    {
+                        width: 200px !important;
+                        height: 200px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 320px)
+{
+    main .main-wrapper.home
+    {
+        .introduction
+        {
+            .animation
+            {
+                .center
+                {
+                    lottie-player
+                    {
+                        width: 150px !important;
+                        height: 150px !important;
+                    }
+                }
+            }
+        }
+    }
 }
