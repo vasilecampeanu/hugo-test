@@ -1,0 +1,55 @@
+{{ $profilePicture := resources.Get "images/profilePicture.jpeg" }}
+{{ $skills := resources.Get "images/skills.png" }}
+
+<div class="main-wrapper about">
+    <div class="profile">
+        <div class="profile-info">
+            <div class="banner">
+            </div>
+            <div class="profile-picture-and-socialmedia">
+                <div class="profile-picture">
+                    <img src="{{ $profilePicture.RelPermalink }}" alt="">
+                </div>
+                <div class="social-media-links">
+                    <ul>
+                        <li>
+                            <a href=""><i class="fab fa-github"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fab fa-instagram"></i></a>                     
+                        </li>
+                        <li>
+                            <a href=""><i class="fab fa-twitter"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="info">
+                <div class="profile-name">Vasile Campeanu</div>
+                <div class="profile-specialization">
+                    Computer Scientist <span><i class="fa-solid fa-location-dot"></i> from Europe, Romania</span>
+                </div>
+                <div class="profile-status">
+                    <span>Status:</span> Studying & Researching
+                </div>
+                <div class="profile-description">
+                    <span>Description:</span> The purpose of thinking is to let your thoughts die instead of you.
+                </div>
+                <div class="call-to-action">
+                    <ul>
+                        <li><a href="/blog/">BLOG</a></li>
+                        <li><a href="/newsletter/">SUBSCRIBE</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="profile-skills">
+            <div class="title">
+                Skills
+            </div>
+            <div class="skills">
+                <img src="{{ $skills.RelPermalink }}" alt="">
+            </div>
+        </div>
+    </div>
+</div>

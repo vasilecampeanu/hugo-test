@@ -1,0 +1,285 @@
+main .main-wrapper.about
+{
+    .profile
+    {
+        display: grid;
+        grid-template-areas: "profile-info profile-skills";
+        grid-template-columns: 1fr 30%;
+        gap: 2rem;
+
+        .profile-info
+        {
+            grid-area: profile-info;
+            border: 2px solid var(--border-color);
+            border-radius: 15px;
+            
+            display: grid;
+            grid-template-areas: 
+            "banner"
+            "profile-picture-and-socialmedia"
+            "info";
+        
+            grid-template-rows: repeat(3, calc(200px / 3)) auto;
+            
+            background-color: var(--text-accent-hover);
+            // box-shadow: 0 12px 28px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+            
+            .banner
+            {
+                /* height: 200px; */
+                grid-area: banner;
+                grid-row-start: 1;
+                grid-row-end: 4;
+            }
+
+            .profile-picture-and-socialmedia
+            {
+                /* background-color: red; */
+                z-index: 10;
+                /* opacity: .5; */
+                grid-area: profile-picture-and-socialmedia;
+                grid-row-start: 2;
+                grid-row-end: 4;
+                display: grid;
+                grid-template-areas: 
+                "profile-picture social-media-links";
+                grid-template-columns: auto 1fr;
+
+                .profile-picture
+                {
+                    grid-area: profile-picture;
+
+                    img
+                    {
+                        width: calc((200px / 3) * 2);
+                        margin-left: 50px;
+                        border-radius: 10px;
+                        border: 2px solid var(--border-color);
+                        cursor: pointer;
+                    }
+                }
+
+                .social-media-links
+                {
+                    grid-area: social-media-links;
+                    /* background-color: green; */
+                    height: calc(200px / 3);
+                    align-self: end;
+                    display: grid;
+                    align-content: center;
+
+                    ul
+                    {
+                        margin-left: 25px;
+                        line-height: 0;
+
+                        li
+                        {
+                            display: inline;
+                            list-style: none;
+                            padding-right: 7.5px;
+
+                            a
+                            {
+                                font-size: 24px;
+                                color: var(--text-normal);
+                                transition: all var(--hover-transition);
+
+                                &:hover
+                                {
+                                    color: var(--text-accent-hover);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .info
+            {
+                grid-area: info;
+                grid-row-start: 3;
+                grid-row-end: 5;
+                
+                border-radius: 13px;
+                border-top: 2px solid var(--border-color);
+                
+                padding-top: calc(200px / 3);
+                padding-left: 50px;
+                padding-right: 50px;
+                padding-bottom: 15px;
+            
+                z-index: 9;
+                background-color: var(--background-secondary-01);
+            
+                display: grid;
+                
+                .profile-name
+                {
+                    padding-top: 5px;
+                    font-weight: bold;
+                    font-size: 1.5rem;
+                }
+
+                .profile-specialization
+                {
+                    font-weight: bold;
+
+                    span
+                    {
+                        font-weight: normal;
+                    }
+                }
+
+                .profile-status 
+                {
+                    span
+                    {
+                        font-weight: bold;
+                    }
+                }
+
+                .profile-description
+                {
+                    font-size: 1rem;
+
+                    span
+                    {
+                        font-weight: bold;
+                    }
+                }
+
+                .call-to-action
+                {
+                    margin-top: 20px;
+                    height: 60px;
+                    display: grid;
+                    align-content: center;
+                    /* background-color: rebeccapurple; */
+                    border-top: 2px solid var(--border-color);
+
+                    ul li
+                    {
+                        display: inline;
+                        list-style: none;
+
+                        a
+                        {
+                            border: 2px solid var(--border-color);
+                            border-radius: 5px;
+                            text-decoration: none;
+                            color: white;
+                            background-color: #4C6EF5;
+                            padding: 7.5px 25px;
+                            transition: all var(--hover-transition);
+
+                            &:hover
+                            {
+                                background-color: #F5D34C;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .profile-skills
+        {
+            grid-area: profile-skills;
+
+            .title
+            {
+                font-size: 1.5rem;
+                font-weight: bold;
+                height: calc(200px / 3);
+                display: grid;
+                align-content: end;
+            }
+
+            .skills
+            {
+                border: 2px solid var(--border-color);
+                border-radius: 15px;
+                padding: 15px;
+                height: calc(100% - calc(200px / 3));
+                display: grid;
+                // box-shadow: 0 12px 28px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+
+                background-color: var(--background-secondary-01);
+                img
+                {
+                    justify-self: center;
+                    align-self: center;
+                    width: 42.5%;
+                    /* height: 100% !important; */
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px)
+{
+    main .main-wrapper.about
+    {
+        .profile
+        {
+            grid-area: profile;
+            align-self: start;
+            display: grid;
+            grid-template-areas: 
+            "profile-info" 
+            "profile-skills";
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+
+            .profile-info 
+            {
+                .profile-picture-and-socialmedia
+                {
+                    grid-template-areas: 
+                    "profile-picture"
+                    "social-media-links";
+                    grid-template-columns: 1fr;
+                    grid-template-rows: auto;
+                    height: 200px;
+
+                    .profile-picture
+                    {
+                        justify-self: center;
+
+                        img
+                        {
+                            margin-left: 0px;
+                        }
+                    }
+
+                    .social-media-links
+                    {
+                        justify-self: center;
+
+                        ul
+                        {
+                            margin-left: 0;
+                            line-height: 0;
+                        }
+                    }
+                }
+
+                .info
+                {
+                    padding-top: calc((200px / 3) * 2);
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    padding-bottom: 15px;
+
+                    .profile-name
+                    {
+                        padding-top: 0px;
+                        justify-self: center;
+                    }
+                }            
+            }
+        }
+    }
+}
