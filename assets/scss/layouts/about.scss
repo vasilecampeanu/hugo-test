@@ -21,7 +21,7 @@ main .main-wrapper.about
         
             grid-template-rows: repeat(3, calc(200px / 3)) auto;
             
-            background-color: var(--text-accent-hover);
+            background-color: var(--background-secondary-02);
             // box-shadow: 0 12px 28px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
             
             .banner
@@ -206,6 +206,7 @@ main .main-wrapper.about
                 // box-shadow: 0 12px 28px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
 
                 background-color: var(--background-secondary-01);
+
                 img
                 {
                     justify-self: center;
@@ -215,6 +216,167 @@ main .main-wrapper.about
                 }
             }
         }
+    }
+
+    .balloon-info
+    {
+        margin-top: 2rem;
+        // padding-left: 50px;
+    }
+
+    .info-about-me
+    {
+        display: grid;
+        display: none !important;
+        margin-top: 2rem;
+        // grid-template-columns: 1fr 30%;
+        gap: 2rem;
+        
+        .info
+        {
+            // width: 70%;
+            justify-self: center;
+            background-color: var(--background-secondary-01);
+            border-radius: 15px;
+            padding: 50px;
+            border: 2px solid var(--border-color);
+            font-size: 16px;
+
+            p
+            {
+                padding-bottom: 10px;
+            }
+        }
+
+        .highlights
+        {
+            padding-left: 50px;
+        }
+    }
+
+    .project-gallery
+    {
+        grid-area: "project-gallery";
+        align-self: start;
+        display: grid;
+        grid-template-areas: 
+        "title"
+        "content";
+        gap: .5rem;
+
+        margin-top: 2rem;
+
+        .title
+        {
+            grid-area: title;
+            justify-self: start;
+            width: 100%;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .content
+        {
+            grid-area: content;
+            justify-self: start;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 1.5rem;
+
+            @media screen and (max-width: 1024px)
+            {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+
+            .gallery-item
+            {
+                border: 2px solid var(--border-color);
+                border-radius: 15px;
+                cursor: pointer;
+                height: 200px;
+                display: grid;
+                grid-template-areas: "embed";
+
+                background-color: var(--background-secondary-01);
+                width: 100% !important;
+
+                .embed
+                {
+                    grid-area: embed;
+                    display: grid;
+                    justify-content: center;
+                    align-content: center;
+                    object, img
+                    {
+                        width: 50%;
+                        justify-self: center;
+                        align-self: center;
+                    }
+                }
+
+                .title-overlay
+                {
+                    grid-area: embed;
+                    display: grid;
+                    justify-content: center;
+                    align-content: center;
+                    transition: .3s ease-in-out;
+                    -webkit-backdrop-filter: blur(5px) saturate(1.8);
+                    backdrop-filter: blur(5px) saturate(1.8);
+                    opacity: 0;
+                    border-radius: 13px;
+
+                    a
+                    {
+                        color: var(--text-normal);
+                        font-weight: bolder;
+                        text-decoration: underline;
+                        transition: all var(--hover-transition);
+                        &:hover
+                        {
+                            color: var(--text-accent-hover);
+                        }
+                    }
+                }
+
+                &.project01
+                {
+                    img
+                    {
+                        width: 100% !important;
+                    }
+
+                    &:hover .title-overlay
+                    {
+                        opacity: 1;
+                    }
+                }
+
+                &.alone
+                {
+                    height: 420px !important;
+                }
+            }
+        }
+    }
+}
+
+.item-1-2-cr
+{
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    height: 100% !important;
+}
+
+@media screen and (max-width: 1024px)
+{
+    .item-1-2-cr
+    {
+        grid-column: 1;
+        grid-row: 1;
     }
 }
 

@@ -1,4 +1,4 @@
-{{ $profilePicture := resources.Get "images/profilePicture.jpeg" }}
+{{ $profilePicture := resources.Get "images/profilePicture.jpg" }}
 {{ $skills := resources.Get "images/skills.png" }}
 
 <div class="main-wrapper about">
@@ -49,6 +49,50 @@
             </div>
             <div class="skills">
                 <img src="{{ $skills.RelPermalink }}" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="balloon-info">
+        {{ partial "balloon/layout.html" . }}
+    </div>
+    <div class="info-about-me">
+        <div class="info">
+            <h1>Despre mine</h1>
+            <p>Hey, sunt un informatician situat in Romania. Nesurprinzător, am o pasiune destul de serioasa pentru calculatoare, software si conseptul de infromatie.</p>
+    
+            <p>Pentru mine, a fi programator inseamna sa scri cod cu scopul de a te exprima. Programarea in sine este doar o unealta, nu este speciala. Ca un creion, poate sa marcheze chestii pe o foaie de hartie daca apesi suficient de tare. Dar, cu un creion poti sa scri povesti, sa desenzi portrete, sau sa creezi schite pentru un proiect, esti limitat doar de propria ta imaginatie.</p>
+            
+            <p>In cazul meu programarea este o unealta pe care vreau sa o folosesc pentru a intelege sisteme biologice. </p>
+            
+            <p>Am spus la inceput ca sunt interesat de conceptul de informatie, in particular de modul in care informatia este stocata in genomul nostru si de modalitati de a o manipula.</p>
+            
+            <p>Intentionez sa scriu pe viitor mai multe articole bazate pe aceasta tema asta.</p>
+    
+            <h1>Care este scopul acestui website?</h1>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim vestibulum quam, consequat vulputate est laoreet ac. Integer tristique elit id urna ultricies lobortis. Sed viverra justo vel diam egestas, nec pulvinar sem lacinia. In sed purus eget elit sollicitudin rutrum vitae dignissim lectus. Ut pulvinar mollis lacus, efficitur malesuada justo euismod sit amet. Nam urna quam, ullamcorper in scelerisque at, ornare sit amet neque. Suspendisse consequat justo mauris, vitae luctus nulla sagittis quis. Vivamus in rutrum erat. Quisque a consequat quam. Vivamus vel eros metus. Proin a dolor vitae tortor ullamcorper euismod. Pellentesque non vulputate velit.</p>
+        </div>
+    </div>
+    <div class="project-gallery">
+        <div class="title">
+            Projects
+        </div>
+        <div class="content">
+            <div class="gallery-item item-1-2-cr project01 alone">
+                <div class="embed">
+                    PREVIEW
+                </div>
+                <div class="title-overlay">
+                    <a href="./article.html">Personal Portfolio/Blog</a>
+                </div>
+            </div>
+            <div class="gallery-item project01">
+                <div class="embed">
+                    PREVIEW
+                </div>
+                <div class="title-overlay">
+                    <a href="#">Test</a>
+                </div>
             </div>
         </div>
     </div>
