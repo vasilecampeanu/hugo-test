@@ -1,0 +1,149 @@
+main .main-wrapper.scrapbook
+{
+    .sketches
+    {
+        display: grid;
+        grid-template-areas: 
+        "title"
+        "tabs";
+        grid-template-rows: auto 1fr;
+        gap: 0.5rem;
+
+        .title
+        {
+            grid-area: title;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .tabs
+        {
+            grid-area: tabs;
+            font-size: 1.25rem;
+
+            .tab 
+            {
+                height:  55px;
+                padding-bottom: 5px;
+                // padding-left: 10px;
+                // margin-top: 2px;
+                margin-bottom: 6px;
+
+                button 
+                {
+                    background-color: inherit;
+                    float: left;
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                    padding: 7.5px 10px;
+                    width: 170px;
+                    margin-right: 5px;
+                    transition: 0.3s;
+                    font-size: 17px;
+                    // font-family: Virgil;
+                    color: var(--text-normal);
+                    border-radius: 5px;
+                    margin-top: 14px;
+                    border: 2px solid var(--border-color);
+                    background-color: var(--background-secondary-02);
+                    font-weight: bold;
+                    transition: all var(--hover-transition);
+
+                    &:hover 
+                    {
+                        background-color: #4C6EF5;
+                        color: white;
+                    }
+
+                    &.active 
+                    {
+                        color: white;
+                        margin-top: 0;
+                        padding: 14.5px 10px;
+                        background-color: var(--text-accent);
+                    }
+                    
+                    @media screen and (max-width: 764px)
+                    {
+                        width: 120px;
+                        font-size: 13px;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .tab-content 
+            {
+                display: none;
+                border-radius: 15px;
+                border-top: 3px solid var(--border-color);
+                border-bottom: 3px solid var(--border-color);
+                padding: 25px 10px;
+                background-color: var(--background-secondary-01);
+                
+                .content
+                {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-rows: auto;
+                    row-gap: 1.25rem;
+                    column-gap: .75rem;
+
+                    @media screen and (max-width: 1024px)
+                    {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        grid-template-rows: auto;
+                    }
+                }
+                
+                .sketch-item 
+                {
+                    display: grid;
+                    grid-template-areas: 
+                    "media"
+                    "title";
+                    grid-template-rows: auto 1fr;
+
+                    .media
+                    {
+                        grid-area: media;
+
+                        video
+                        {
+                            border: 2px solid var(--border-color);
+                            border-radius: 5px !important;
+                            cursor: pointer;
+                        }
+                    }
+
+                    .title
+                    {
+                        padding: 0px 5px;
+
+                        a
+                        {
+                            
+                            font-size: 14px;
+                            grid-area: title;
+                            // text-decoration: none !important;
+                            /* background-color: orange; */
+                            display: grid;
+                            /* justify-content: start !important; */
+                            align-content: start;
+                            color: var(--text-accent);
+                            transition: all var(--hover-transition);
+                            font-weight: bold;
+
+                            &:hover
+                            {
+                                color: var(--text-accent-hover);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

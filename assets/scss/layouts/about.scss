@@ -4,8 +4,13 @@ main .main-wrapper.about
     {
         display: grid;
         grid-template-areas: "profile-info profile-skills";
-        grid-template-columns: 1fr 30%;
-        gap: 2rem;
+        grid-template-columns: 1fr 27.5%;
+        gap: 1.5rem;
+
+        @media screen and (max-width: 1440px)
+        {
+            grid-template-columns: 1fr 30%;
+        }
 
         .profile-info
         {
@@ -220,7 +225,7 @@ main .main-wrapper.about
 
     .balloon-info
     {
-        margin-top: 2rem;
+        margin-top: 1.5rem;
         // padding-left: 50px;
     }
 
@@ -228,9 +233,9 @@ main .main-wrapper.about
     {
         display: grid;
         display: none !important;
-        margin-top: 2rem;
+        margin-top: 1.5rem;
         // grid-template-columns: 1fr 30%;
-        gap: 2rem;
+        gap: 1.5rem;
         
         .info
         {
@@ -264,7 +269,7 @@ main .main-wrapper.about
         "content";
         gap: .5rem;
 
-        margin-top: 2rem;
+        margin-top: 1.5rem;
 
         .title
         {

@@ -1,0 +1,58 @@
+{{ $blogLogo := resources.Get "videos/BlogLogo.mp4" }}
+{{ $blogLogoCover := resources.Get "videos/covers/BlogLogo.png" }}
+
+<div class="main-wrapper scrapbook">
+    <div class="sketches">
+        <div class="title">Sketches</div>
+        <div class="tabs">
+            <div class="tab">
+                <button class="tab-links active" onclick="openTab(event, 'mathematics')">Mathematics</button>
+                <button class="tab-links" onclick="openTab(event, 'biology')">Biology</button>
+            </div>
+            <div id="mathematics" class="tab-content" style="display: block;">
+                <div class="content">
+                    <div class="sketch-item">
+                        <div class="media">
+                            <video
+                                src="{{ $blogLogo.RelPermalink }}" 
+                                poster="{{ $blogLogoCover.RelPermalink }}"
+                                loop muted>
+                            </video>
+                        </div>
+                        <div class="title">
+                            <a href="#">This is just a regullar test</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="biology" class="tab-content">
+                <div class="content">
+                    Nothing to show
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openTab(evt, cityName) 
+    {
+        var i, tabcontent, tablinks;
+    
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) 
+        {
+            tabcontent[i].style.display = "none";
+        }
+    
+        tablinks = document.getElementsByClassName("tab-links");
+    
+        for (i = 0; i < tablinks.length; i++) 
+        {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+    
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";   
+    }
+</script>
