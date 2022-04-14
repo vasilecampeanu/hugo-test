@@ -1,5 +1,120 @@
 main .main-wrapper.scrapbook
 {
+    .banner
+    {
+        background-color: var(--background-secondary-01);
+        border-radius: 15px;
+        height: 250px;
+        border: 2px solid var(--border-color);
+        margin-bottom: 20px;
+    }
+
+    .container
+    {
+        display: grid;
+        grid-template-columns: 1fr 30%;
+        gap: 2rem;
+
+        @media screen and (max-width: 1024px)
+        {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+        }
+
+        .content
+        {
+            .info
+            {
+                display: none;
+
+                .title
+                {
+                    font-size: 20px;
+                    font-weight: bold;
+                    padding-bottom: 10px;   
+                }
+            }
+
+            .snippets
+            {
+                // margin-top: 20px;
+                margin-bottom: 20px;
+
+                .title
+                {
+                    font-size: 20px;
+                    font-weight: bold;
+                    padding-bottom: 10px;
+                }
+
+                ul
+                {
+                    li
+                    {
+                        list-style: none;
+                        background-color: var(--background-secondary-01);
+                        padding: 10px 20px;
+                        border-radius: 5px;
+                        border: 2px solid var(--border-color);
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+
+        .sidebar
+        {
+            .fleeting
+            {
+                .title
+                {
+                    font-size: 20px;
+                    padding-bottom: 10px;
+                    font-weight: bold;
+                }
+
+                ul
+                {
+                    li
+                    {
+                        list-style: none;
+                        margin-bottom: 7.5px;
+                        cursor: pointer;
+        
+                        div
+                        {
+                            display: inline-flex;
+        
+                            span
+                            {
+                                padding-right: 12.5px;
+                                
+                                i
+                                {
+                                    color: var(--text-accent);
+                                    transition: all var(--hover-transition);
+                                }
+                            }
+        
+                            a
+                            {
+                                color: var(--text-normal);
+                                text-decoration: none;
+                                font-weight: bold;
+                                font-size: var(--font-size-xsm);
+                            }
+                        }
+        
+                        &:hover i
+                        {
+                            transform: translateX(7.5px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .sketches
     {
         display: grid;
@@ -12,7 +127,7 @@ main .main-wrapper.scrapbook
         .title
         {
             grid-area: title;
-            font-size: 24px;
+            font-size: 20px;
             font-weight: bold;
         }
 
