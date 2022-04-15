@@ -58,7 +58,8 @@ header nav.navbar.desktop
                     color: var(--text-normal);
                     font-weight: bold;
 
-                    font-size: var(--font-size-xsm);
+                    font-size: var(--font-size-xxsm);
+                    text-transform: uppercase;
 
                     &.active
                     {
@@ -364,7 +365,9 @@ header nav.navbar.mobile
                     opacity: 0;
                     transform: translateY(-10px);
                     display: block;
-                    font-size: var(--font-size-sm);
+
+                    font-size: var(--font-size-xsm);
+                    text-transform: uppercase;
 
                     &.active
                     {
