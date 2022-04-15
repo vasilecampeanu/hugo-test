@@ -10,7 +10,7 @@ main .main-wrapper.home
 
         gap: 20px;
 
-        min-height: calc(100vh - 80px - 40px);
+        min-height: calc(100vh - 80px);
 
         .about
         {
@@ -163,6 +163,70 @@ main .main-wrapper.home
                 {
                     width: 100%;
                     height: 100%;
+                }
+            }
+        }
+    }
+
+    .container
+    {
+        display: grid;
+        grid-template-columns: 1fr 30%;
+        gap: 2rem;
+        
+        @media screen and (max-width: 1024px)
+        {
+            grid-template-columns: 1fr;
+        }
+
+        .sidebar
+        {
+            .fleeting
+            {
+                .title
+                {
+                    font-size: 20px;
+                    padding-bottom: 10px;
+                    font-weight: bold;
+                }
+
+                ul
+                {
+                    li
+                    {
+                        list-style: none;
+                        margin-bottom: 7.5px;
+                        cursor: pointer;
+        
+                        div
+                        {
+                            display: inline-flex;
+        
+                            span
+                            {
+                                padding-right: 12.5px;
+                                
+                                i
+                                {
+                                    color: var(--text-accent);
+                                    transition: all var(--hover-transition);
+                                }
+                            }
+        
+                            a
+                            {
+                                color: var(--text-normal);
+                                text-decoration: none;
+                                font-weight: bold;
+                                font-size: var(--font-size-xsm);
+                            }
+                        }
+        
+                        &:hover i
+                        {
+                            transform: translateX(7.5px);
+                        }
+                    }
                 }
             }
         }
