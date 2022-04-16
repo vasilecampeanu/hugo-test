@@ -1,0 +1,156 @@
+.article-page 
+{
+    .main-wrapper.article
+    {
+        display: grid;
+        grid-template-columns: 1fr 30%;
+        gap: 2rem;
+        
+        @media screen and (max-width: 1024px)
+        {
+            grid-template-columns: 1fr;
+        }
+
+        article
+        {
+            &.has-image
+            {
+                .article-image
+                {
+                    a
+                    {
+                        img
+                        {
+                            width: 100%;
+                            height: 175px;
+                            border-radius: 12.5px;
+                        }
+                    }
+                }
+            }
+            .article-details
+            {
+                padding: 30px 0px;
+                header
+                {
+                    padding-top: 5px;
+                    
+                    &.article-category
+                    {
+                        a 
+                        {
+                            background-color: var(--background-secondary-02);
+                            box-shadow: var(--shadow-l1);
+                            padding: 5px 20px;
+                            color: var(--text-normal);
+                            text-decoration: none;
+                            border-radius: 5px;
+                            border: 1px solid var(--border-color);
+                            font-weight: bold;
+                            font-size: var(--font-size-xxsm);
+
+                            &:hover 
+                            {
+                                box-shadow: var(--shadow-l2);
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+
+                .article-title-wrapper
+                {
+                    margin-top: 5px;
+
+                    .article-title
+                    {
+                        a
+                        {
+                            text-decoration: none;
+                            color: var(--text-accent);
+                            transition: all var(--hover-transition);
+
+                            font-size: var(--font-size-m);
+
+                            &:hover
+                            {
+                                color: var(--text-accent-hover);
+                            }
+                        }
+                    }
+
+                    .article-description
+                    {
+                        border-top: 2px solid var(--border-color);
+                        border-bottom: 2px solid var(--border-color);
+                        padding: 10px 0px;
+                        font-weight: normal;
+                        color: var(--article-description-color);
+                        transition: all var(--description-hover-transition);
+                        
+                        margin-top: 10px;
+                        
+                        font-size: var(--font-size-xsm);
+
+                        &:hover
+                        {
+                            color: var(--text-normal);
+                        }
+
+                        a
+                        {
+                            color: var(--text-accent);
+                            text-decoration: underline;
+                            font-weight: bold;
+                            transition: all var(--hover-transition);
+
+                            &:hover
+                            {
+                                color: var(--text-accent-hover);
+                            }
+                        }
+                    }
+                }
+
+                section
+                {
+                    margin-top: 10px;
+
+                    &.article-time, &.article-translations 
+                    {
+                        display: flex;
+                        align-items: center;
+                        color: var(--text-normal);
+                        gap: 15px;
+                        flex-wrap: wrap;
+
+                        svg 
+                        {
+                            vertical-align: middle;
+                            width: 18px;
+                            height: 18px;
+                            stroke-width: 1.33;
+                        }
+                    
+                        time
+                        {
+                            font-size: var(--font-size-xxsm);
+                            color: var(--text-normal);
+                        }
+                    
+                        & > div 
+                        {
+                            display: inline-flex;
+                            align-items: center;
+                            gap: 7.5px;
+                        }
+                    }
+                }
+            }
+
+            &.main-article
+            {
+            }
+        }
+    }
+}

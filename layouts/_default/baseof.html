@@ -4,7 +4,7 @@
 <head>
     {{ partial "components/head/head.html" . }}
 </head>
-<body id="body" class="dark-theme">
+<body id="body" class="dark-theme {{ block `body-class` . }}{{ end }}">
     <div class="loader">
         {{ $loadingAnimation := resources.Get "json/loadingAnimation.json" }}
         <!-- Credit: https://lottiefiles.com/xta6vx5dtr -->

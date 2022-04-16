@@ -1,7 +1,14 @@
-<article class="{{ if .Params.image }}has-image {{ end }}main-article">
-    {{ partial "article/components/header" . }}
-
-    {{ partial "article/components/content" . }}
-
-    {{ partial "article/components/footer" . }}
-</article>
+<div class="main-wrapper article">
+    <article class="{{ if .Params.image }}has-image {{ end }}main-article">
+        {{ partial "article/components/header" . }}
+    
+        {{ partial "article/components/content" . }}
+    
+        {{ partial "article/components/footer" . }}
+    </article>
+    <div>
+        <aside class="sidebar right-sidebar sticky">
+            right-sidebar
+        </aside>
+    </div>
+</div>
