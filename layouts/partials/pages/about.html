@@ -1,5 +1,5 @@
 {{ $profilePicture := resources.Get "images/profilePicture.jpg" }}
-{{ $skills := resources.Get "images/skills.png" }}
+{{ $skills := resources.Get "svg/skills-dark.svg" }}
 
 <div class="main-wrapper about">
     <div class="profile">
@@ -45,10 +45,10 @@
         </div>
         <div class="profile-skills">
             <div class="title">
-                Skills
+                SKILLS
             </div>
             <div class="skills">
-                <img src="{{ $skills.RelPermalink }}" alt="">
+                <object data="{{ $skills.RelPermalink }}" type=""></object>
             </div>
         </div>
     </div>
@@ -75,7 +75,7 @@
     </div>
     <div class="project-gallery">
         <div class="title">
-            Projects
+            PROJECTS
         </div>
         <div class="content">
             <div class="gallery-item item-1-2-cr project01 alone">
