@@ -84,3 +84,15 @@
     --border-bottom-to-hover: rgb(255, 255, 255, 0);
     --border-bottom-hovered: rgb(255, 255, 255, 1);
 }
+
+[saved-theme="dark"] 
+{
+    --background-primary: #0E141B;
+    --background-secondary-01: rgb(27, 32, 37);
+    --background-secondary-02: #363C43;
+    --text-normal: #ffffff;
+    --border-color: #25282e;
+    --article-description-color: #b6bfcb;
+    --border-bottom-to-hover: rgb(255, 255, 255, 0);
+    --border-bottom-hovered: rgb(255, 255, 255, 1);
+}

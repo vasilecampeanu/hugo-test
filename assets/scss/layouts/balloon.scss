@@ -184,7 +184,7 @@ $md_min_width: 48rem;
     }
 }
 
-body[data-theme="dark"]
+[saved-theme="dark"] 
 {
     .balloon-head-item 
     {
@@ -195,7 +195,7 @@ body[data-theme="dark"]
     }
 }
 
-body[data-theme="light"]
+[saved-theme="light"] 
 {
     .balloon-head-item 
     {

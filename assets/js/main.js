@@ -49,49 +49,35 @@ window.onbeforeunload = function () {
 // Theme settings
 // --------------------------------------------------------------------------------------------
 
-var icon  = document.getElementById("toggle");
+const userPref = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
+const currentTheme = localStorage.getItem('theme') ?? userPref
 
-// Set a local item "theme" as default for the first time when the user enters the site
-var theme = window.localStorage.getItem("theme");
-
-if(theme)
+if (currentTheme)
 {
-    console.log(theme);
-}
-else
-{
-    window.localStorage.setItem("theme", "default");
+    document.documentElement.setAttribute('saved-theme', currentTheme);
 }
 
-if(theme === "light")
-{
-    document.body.setAttribute('data-theme', 'light');
-}
-else
-{
-    document.body.setAttribute('data-theme', 'dark');
-}
-
-if(theme === "light")
-{
-    document.body.classList.toggle("dark-theme");
+const switchTheme = (e) => {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('saved-theme', 'dark')
+        localStorage.setItem('theme', 'dark')
+    } else {
+        document.documentElement.setAttribute('saved-theme', 'light')
+        localStorage.setItem('theme', 'light')
+    }
 }
 
-icon.onclick = function ()
-{
-    document.body.classList.toggle("dark-theme");
+window.addEventListener('DOMContentLoaded', () => {
+    // Darkmode toggle
+    const toggleSwitch = document.querySelector('#darkmode-toggle')
 
-    if(theme === "default")
-        window.localStorage.setItem("theme", "light");
-        
-    if(theme === "light")
-        window.localStorage.setItem("theme", "dark");
-        
-    if(theme === "dark")
-        window.localStorage.setItem("theme", "light");
+    // listen for toggle
+    toggleSwitch.addEventListener('change', switchTheme, false)
 
-    window.location.reload();
-}
+    if (currentTheme === 'dark') {
+        toggleSwitch.checked = true
+    }
+})
 
 // --------------------------------------------------------------------------------------------
 // Highlight blog link in post pages
