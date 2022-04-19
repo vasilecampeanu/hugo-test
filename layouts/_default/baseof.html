@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{{/*  class="notranslate" translate="no" - Those parameters prevent autotranslation  */}}
+{{/*  class="notranslate" translate="no" - Those parameters prevent the page to be autotranslated  */}}
 <html lang="en" class="notranslate" translate="no">
 <head>
     {{ partial "components/head/head.html" . }}
@@ -32,41 +32,6 @@
             {{ block "footer" . }}{{ end }}
         </footer>
     </div>
-    <script>
-        const loader  = document.querySelector(".loader");
-        const wrapper = document.querySelector(".site-wrapper");
-        const loadin_animation = document.getElementById("loading-animation");
-        const body = document.getElementById("body");
-        var loadTime;
-
-        window.onload = function () {
-            loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart; 
-            console.log('Page load time is '+ loadTime);
-            
-            if(loadTime < 500)
-            {
-                loadTime = 0;
-            }
-
-            (function () {
-                wrapper.style.display = 'grid';
-                body.classList.add("hide-overflow");
-                
-                setTimeout(() => {
-                    loader.style.opacity  = 0;
-                    loader.style.display  = 'none';
-                    loadin_animation.remove();
-                    setTimeout(() => (wrapper.style.opacity = 1), 50);
-                }, loadTime);
-    
-                setTimeout(() => (body.classList.remove("hide-overflow")), loadTime);
-            }())
-        }
-        
-        window.onbeforeunload = function () {
-            window.scrollTo(0, 0);
-        };
-    </script>
     {{ partial "components/footer/include.html" . }}
 </body>
 </html>

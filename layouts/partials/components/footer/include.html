@@ -1,8 +1,14 @@
 {{/*  External  */}}
+{{/*  Ajax may be needed to be included in the head  */}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://kit.fontawesome.com/c82b8628d1.js" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script src="https://kit.fontawesome.com/c82b8628d1.js" crossorigin="anonymous"></script>
 
 {{/*  Internal  */}}
-{{ $modal := resources.Get "js/modal.js" }}
-<script src="{{ $modal.RelPermalink }}"></script>
+{{/*  Get Resources  */}}
+{{ $main := resources.Get "js/main.js"  }}
+
+{{/*  Include script  */}}
+<script src="{{ $main.RelPermalink }}" ></script>
