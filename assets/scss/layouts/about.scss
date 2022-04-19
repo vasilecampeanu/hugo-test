@@ -112,76 +112,45 @@ main .main-wrapper.about
                 padding-top: calc(200px / 3);
                 padding-left: 50px;
                 padding-right: 50px;
-                padding-bottom: 15px;
+                padding-bottom: 50px;
             
                 z-index: 9;
                 background-color: var(--background-secondary-01);
-            
-                display: grid;
+                // display: grid;
                 
                 .profile-name
                 {
-                    padding-top: 5px;
+                    font-size: 24px;
                     font-weight: bold;
-                    font-size: 1.5rem;
                 }
-
-                .profile-specialization
-                {
-                    font-weight: bold;
-
-                    span
-                    {
-                        font-weight: normal;
-                    }
-                }
-
-                .profile-status 
-                {
-                    span
-                    {
-                        font-weight: bold;
-                    }
-                }
-
+                
                 .profile-description
                 {
-                    font-size: 1rem;
-
-                    span
-                    {
-                        font-weight: bold;
-                    }
                 }
 
                 .call-to-action
                 {
-                    margin-top: 20px;
-                    height: 60px;
-                    display: grid;
-                    align-content: center;
-                    /* background-color: rebeccapurple; */
+                    align-self: end;
                     border-top: 2px solid var(--border-color);
+                    padding-top: 10px;
+                    margin-top:  10px;
 
-                    ul li
+                    a
                     {
-                        display: inline;
-                        list-style: none;
+                        text-decoration: none;
+                        color: white;
+                        font-size: 13px;
+                        padding: 5px 20px;
+                        display: inline-block;
+                        border: 1px solid var(--border-color);
+                        border-radius: 5px;
+                        background-color: var(--text-accent);
+                        transition: all var(--hover-transition);
+                        font-weight: bold;
 
-                        a
+                        &:hover
                         {
-                            border: 2px solid var(--border-color);
-                            border-radius: 5px;
-                            text-decoration: none;
-                            color: white;
-                            background-color: #4C6EF5;
-                            padding: 7.5px 25px;
-                            transition: all var(--hover-transition);
-
-                            &:hover
-                            {
-                                background-color: #F5D34C;
-                            }
+                            background-color: var(--text-accent-hover);
                         }
                     }
                 }
@@ -203,27 +172,85 @@ main .main-wrapper.about
 
             .skills
             {
+                display: grid;
                 border: 2px solid var(--border-color);
                 border-radius: 15px;
                 padding: 15px;
                 height: calc(100% - calc(200px / 3));
-                display: grid;
                 // box-shadow: 0 12px 28px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
 
                 background-color: var(--background-secondary-01);
 
-                img
-                {
-                    justify-self: center;
-                    align-self: center;
-                    width: 42.5%;
-                    /* height: 100% !important; */
-                }
-                
                 object
                 {
                     width: 100%;
                     height: 100%;
+                }
+            }
+        }
+    }
+
+    .highlights
+    {
+        @media screen and (max-width: 1024px)
+        {
+            display: none;
+        }
+        
+        margin-top: 20px;
+        margin-bottom: 20px;
+        
+        .title
+        {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        display: grid;
+
+        .list
+        {
+            justify-self: start;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 2.5rem;
+
+            .highlight
+            {
+                // justify-self: center;
+                .highlight-preview
+                {
+                    background-size: cover;
+                    cursor: pointer;
+
+                    .preview
+                    {
+                        position: relative;
+                        width: 75px;
+                        height: 75px;
+                        border-radius: 100%;
+                        border: 3px solid var(--background-secondary-02);
+                        background-color: var(--background-secondary-01);
+
+                        & > div
+                        {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 100%;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                        }
+                    }
+                }
+
+                .name
+                {
+                    text-align: center;
+                    padding-top: 15px;
+                    font-weight: bold;
+                    font-size: 13px;
                 }
             }
         }
@@ -446,10 +473,14 @@ main .main-wrapper.about
                     padding-right: 15px;
                     padding-bottom: 15px;
 
+                    .profile-description
+                    {
+                        margin-top: 5px;
+                    }
+
                     .profile-name
                     {
-                        padding-top: 0px;
-                        justify-self: center;
+                        text-align: center;
                     }
                 }            
             }
