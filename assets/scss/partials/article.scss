@@ -28,9 +28,11 @@
                     }
                 }
             }
+
             .article-details
             {
-                padding: 30px 0px;
+                padding: 20px 25px;
+                
                 header
                 {
                     padding-top: 5px;
@@ -150,6 +152,44 @@
 
             &.main-article
             {
+                border-radius: 15px;
+                background-color: var(--background-secondary-01);
+            }
+
+            &.main-article .article-content
+            {
+                padding: 0px 25px;
+
+                ol 
+                {
+                    list-style: none;
+                    counter-reset: li;
+
+                    li 
+                    {
+                        counter-increment: li;
+                        
+                        &::before
+                        {
+                            content: counter(li) ".";
+                            display: inline-block;
+                            padding-right: 2.5px;
+                            letter-spacing: -2.5px;
+                        }
+                    }
+                }
+                
+                ul
+                {
+                    list-style: none;
+                    
+                    li::before 
+                    { 
+                        content: "•";
+                        display: inline-block;
+                        padding-right: 2.5px;
+                    }
+                }
             }
         }
     }
